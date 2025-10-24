@@ -1,0 +1,10 @@
+main@_main
+	__FillZeros@___FillZeros
+	set_seven_seg@_set_seven_seg
+		Div_8X8_U@_Div_8X8_U
+		Div_16X16_U@_Div_16X16_U
+	seven_seg_scan@_seven_seg_scan
+		all_off@_all_off
+		seg_for@_seg_for
+			Div_8X8_U@_Div_8X8_U
+		enable_pos@_enable_pos

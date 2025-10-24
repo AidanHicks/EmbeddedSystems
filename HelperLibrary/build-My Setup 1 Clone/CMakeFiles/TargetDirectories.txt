@@ -1,0 +1,6 @@
+C:/Users/767905/OneDrive - hull.ac.uk/MIKROE/Projects/HelperLibrary/build-My Setup 1 Clone/CMakeFiles/HelperLibrary_example.dir
+C:/Users/767905/OneDrive - hull.ac.uk/MIKROE/Projects/HelperLibrary/build-My Setup 1 Clone/CMakeFiles/edit_cache.dir
+C:/Users/767905/OneDrive - hull.ac.uk/MIKROE/Projects/HelperLibrary/build-My Setup 1 Clone/CMakeFiles/rebuild_cache.dir
+C:/Users/767905/OneDrive - hull.ac.uk/MIKROE/Projects/HelperLibrary/build-My Setup 1 Clone/lib/CMakeFiles/HelperLibrary.dir
+C:/Users/767905/OneDrive - hull.ac.uk/MIKROE/Projects/HelperLibrary/build-My Setup 1 Clone/lib/CMakeFiles/edit_cache.dir
+C:/Users/767905/OneDrive - hull.ac.uk/MIKROE/Projects/HelperLibrary/build-My Setup 1 Clone/lib/CMakeFiles/rebuild_cache.dir
