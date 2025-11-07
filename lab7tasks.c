@@ -55,6 +55,31 @@ void lcd_print(const char *str) {
     }
 }
 
+void init_ports(void) {
+    TRISBbits.TRISB0 = 1;  
+    TRISBbits.TRISB1 = 0;  
+    ANSELB = 0x00;         
+    LATBbits.LATB1 = 0;    
+}
+
+unsigned char read_button(void) {
+    return PORTBbits.RB0;
+}
+
+void set_led(unsigned char state) {
+    LATBbits.LATB1 = state;
+}
+
+// Task 6 void main(void) {
+    init_ports();
+    while(1) {
+        if (read_button())
+            set_led(1);
+        else
+            set_led(0);
+    }
+
+
 void main(void) {
     lcd_init();
     lcd_print("Robotic Systems");
