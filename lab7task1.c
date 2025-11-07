@@ -57,8 +57,8 @@ void lcd_print(const char *str) {
 
 void main(void) {
     lcd_init();
-    lcd_print("Hello, world!");
+    lcd_print("Robotic Systems");
     lcd_goto_line2();
-    lcd_print("EasyPIC v7a");
+    lcd_print("and Simulation");
     while(1);
 }
