@@ -45,6 +45,10 @@ void lcd_init(void) {
     __delay_ms(2);
 }
 
+void lcd_goto_line2(void) {
+    lcd_cmd(0xC0);
+}
+
 void lcd_print(const char *str) {
     while(*str) {
         lcd_data(*str++);
@@ -54,5 +58,7 @@ void lcd_print(const char *str) {
 void main(void) {
     lcd_init();
     lcd_print("Hello, world!");
+    lcd_goto_line2();
+    lcd_print("EasyPIC v7a");
     while(1);
 }
