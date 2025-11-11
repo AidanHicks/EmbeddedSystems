@@ -756,10 +756,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "4 led.c
-[; ;led.c: 4: void set_led(unsigned char* latch, unsigned char pin, unsigned char state) {
-[v _set_led `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
+[; ;led.c: 4: void led_set(unsigned char* latch, unsigned char pin, unsigned char state) {
+[v _led_set `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
 {
-[e :U _set_led ]
+[e :U _led_set ]
 [v _latch `*uc ~T0 @X0 1 r1 ]
 [v _pin `uc ~T0 @X0 1 r2 ]
 [v _state `uc ~T0 @X0 1 r3 ]
@@ -803,32 +803,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 851 ]
 }
 "17
-[; ;led.c: 17: void led_on(unsigned char* latch, unsigned char pin) { set_led(latch,pin,1); }
+[; ;led.c: 17: void led_on(unsigned char* latch, unsigned char pin) { led_set(latch,pin,1); }
 [v _led_on `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
 [e :U _led_on ]
 [v _latch `*uc ~T0 @X0 1 r1 ]
 [v _pin `uc ~T0 @X0 1 r2 ]
 [f ]
-[e ( _set_led (3 , , _latch _pin -> -> 1 `i `uc ]
+[e ( _led_set (3 , , _latch _pin -> -> 1 `i `uc ]
 [e :UE 855 ]
 }
 "18
-[; ;led.c: 18: void led_off(unsigned char* latch, unsigned char pin) { set_led(latch,pin,0); }
+[; ;led.c: 18: void led_off(unsigned char* latch, unsigned char pin) { led_set(latch,pin,0); }
 [v _led_off `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
 [e :U _led_off ]
 [v _latch `*uc ~T0 @X0 1 r1 ]
 [v _pin `uc ~T0 @X0 1 r2 ]
 [f ]
-[e ( _set_led (3 , , _latch _pin -> -> 0 `i `uc ]
+[e ( _led_set (3 , , _latch _pin -> -> 0 `i `uc ]
 [e :UE 856 ]
 }
 "20
-[; ;led.c: 20: void clear_led(unsigned short* port) {
-[v _clear_led `(v ~T0 @X0 1 ef1`*us ]
+[; ;led.c: 20: void led_clear_port(unsigned short* port) {
+[v _led_clear_port `(v ~T0 @X0 1 ef1`*us ]
 {
-[e :U _clear_led ]
+[e :U _led_clear_port ]
 [v _port `*us ~T0 @X0 1 r1 ]
 [f ]
 "21

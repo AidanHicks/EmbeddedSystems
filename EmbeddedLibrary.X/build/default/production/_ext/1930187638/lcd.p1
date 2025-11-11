@@ -1,35 +1,26 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"7560 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 7560: extern volatile unsigned char LATA __attribute__((address(0xF89)));
-[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
-"52
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 52: extern volatile unsigned char ANSELA __attribute__((address(0xF38)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@3896 ]
-"198
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 198: extern volatile unsigned char ANSELD __attribute__((address(0xF3B)));
-[v _ANSELD `Vuc ~T0 @X0 0 e@3899 ]
-"8726
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 8726: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"20411
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 20411: extern volatile __bit TRISA0 __attribute__((address(0x7C90)));
-[v _TRISA0 `Vb ~T0 @X0 0 e@31888 ]
-"20414
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 20414: extern volatile __bit TRISA1 __attribute__((address(0x7C91)));
-[v _TRISA1 `Vb ~T0 @X0 0 e@31889 ]
-"20417
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 20417: extern volatile __bit TRISA2 __attribute__((address(0x7C92)));
-[v _TRISA2 `Vb ~T0 @X0 0 e@31890 ]
-"20420
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 20420: extern volatile __bit TRISA3 __attribute__((address(0x7C93)));
-[v _TRISA3 `Vb ~T0 @X0 0 e@31891 ]
-"7896
-[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 7896: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
-[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"18728 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 18728: extern volatile __bit LATB0 __attribute__((address(0x7C50)));
+[v _LATB0 `Vb ~T0 @X0 0 e@31824 ]
+"18731
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 18731: extern volatile __bit LATB1 __attribute__((address(0x7C51)));
+[v _LATB1 `Vb ~T0 @X0 0 e@31825 ]
+"18734
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 18734: extern volatile __bit LATB2 __attribute__((address(0x7C52)));
+[v _LATB2 `Vb ~T0 @X0 0 e@31826 ]
+"18737
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 18737: extern volatile __bit LATB3 __attribute__((address(0x7C53)));
+[v _LATB3 `Vb ~T0 @X0 0 e@31827 ]
+"18743
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 18743: extern volatile __bit LATB5 __attribute__((address(0x7C55)));
+[v _LATB5 `Vb ~T0 @X0 0 e@31829 ]
 [v F205 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF205 ~T0 @X0 0 e ]
 [p i __delay ]
+"18740 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 18740: extern volatile __bit LATB4 __attribute__((address(0x7C54)));
+[v _LATB4 `Vb ~T0 @X0 0 e@31828 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -786,185 +777,192 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17372
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"4 C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 4: unsigned char DIG_MAP[4] = {0,1,2,3};
-[v _DIG_MAP `uc ~T0 @X0 -> 4 `i e ]
-[i _DIG_MAP
-:U ..
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 3 `i `uc
-..
-]
-"8
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 8: const unsigned char DIG_MASKS[4] = {0x01,0x02,0x04,0x08};
-[v _DIG_MASKS `Cuc ~T0 @X0 -> 4 `i e ]
-[i _DIG_MASKS
-:U ..
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 4 `i `uc
--> -> 8 `i `uc
-..
-]
-"9
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 9: const unsigned char CC_DIGITS[10] =
-[v _CC_DIGITS `Cuc ~T0 @X0 -> 10 `i e ]
-[i _CC_DIGITS
-:U ..
--> -> 63 `i `uc
--> -> 6 `i `uc
--> -> 91 `i `uc
--> -> 79 `i `uc
--> -> 102 `i `uc
--> -> 109 `i `uc
--> -> 125 `i `uc
--> -> 7 `i `uc
--> -> 127 `i `uc
--> -> 111 `i `uc
-..
-]
-"12
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 12: unsigned char seg_for(unsigned char d){ return CC_DIGITS[d%10u]; }
-[v _seg_for `(uc ~T0 @X0 1 ef1`uc ]
+"4 C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 4: void write_nibble(char nibble) {
+[v _write_nibble `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _seg_for ]
-[v _d `uc ~T0 @X0 1 r1 ]
+[e :U _write_nibble ]
+[v _nibble `uc ~T0 @X0 1 r1 ]
 [f ]
-[e ) *U + &U _CC_DIGITS * -> % -> _d `ui -> 10 `ui `ux -> -> # *U &U _CC_DIGITS `ui `ux ]
-[e $UE 851  ]
+"5
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 5:     LATB0 = (nibble >> 0) & 0x01;
+[e = _LATB0 -> & >> -> _nibble `i -> 0 `i -> 1 `i `b ]
+"6
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 6:     LATB1 = (nibble >> 1) & 0x01;
+[e = _LATB1 -> & >> -> _nibble `i -> 1 `i -> 1 `i `b ]
+"7
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 7:     LATB2 = (nibble >> 2) & 0x01;
+[e = _LATB2 -> & >> -> _nibble `i -> 2 `i -> 1 `i `b ]
+"8
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 8:     LATB3 = (nibble >> 3) & 0x01;
+[e = _LATB3 -> & >> -> _nibble `i -> 3 `i -> 1 `i `b ]
+"9
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 9:     LATB5 = 1;
+[e = _LATB5 -> -> 1 `i `b ]
+"10
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 10:     _delay((unsigned long)((1)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"11
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 11:     LATB5 = 0;
+[e = _LATB5 -> -> 0 `i `b ]
+"12
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 12: }
 [e :UE 851 ]
 }
-"13
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 13: void all_off(void){ if (1) LATA=0x00; else LATA=0x0F; }
-[v _all_off `(v ~T0 @X0 1 ef ]
-{
-[e :U _all_off ]
-[f ]
-[e $ ! != -> 1 `i -> 0 `i 853  ]
-[e = _LATA -> -> 0 `i `uc ]
-[e $U 854  ]
-[e :U 853 ]
-[e = _LATA -> -> 15 `i `uc ]
-[e :U 854 ]
-[e :UE 852 ]
-}
 "14
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 14: void enable_pos(unsigned char pos){
-[v _enable_pos `(v ~T0 @X0 1 ef1`uc ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 14: void write_cmd(char cmd) {
+[v _write_cmd `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _enable_pos ]
-[v _pos `uc ~T0 @X0 1 r1 ]
+[e :U _write_cmd ]
+[v _cmd `uc ~T0 @X0 1 r1 ]
 [f ]
 "15
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 15:     unsigned char mask = DIG_MASKS[ DIG_MAP[pos] ];
-[v _mask `uc ~T0 @X0 1 a ]
-[e = _mask *U + &U _DIG_MASKS * -> *U + &U _DIG_MAP * -> _pos `ux -> -> # *U &U _DIG_MAP `ui `ux `ux -> -> # *U &U _DIG_MASKS `ui `ux ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 15:     LATB4 = 0;
+[e = _LATB4 -> -> 0 `i `b ]
 "16
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 16:     if (1) LATA = mask; else LATA = (unsigned char)(0x0F ^ mask);
-[e $ ! != -> 1 `i -> 0 `i 856  ]
-[e = _LATA _mask ]
-[e $U 857  ]
-[e :U 856 ]
-[e = _LATA -> ^ -> 15 `i -> _mask `i `uc ]
-[e :U 857 ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 16:     write_nibble(cmd >> 4);
+[e ( _write_nibble (1 -> >> -> _cmd `i -> 4 `i `uc ]
 "17
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 17: }
-[e :UE 855 ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 17:     write_nibble(cmd);
+[e ( _write_nibble (1 _cmd ]
+"18
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 18: }
+[e :UE 852 ]
 }
 "20
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 20: unsigned char segments[4];
-[v _segments `uc ~T0 @X0 -> 4 `i e ]
-"22
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 22: void sevenseg_set(unsigned short v) {
-[v _sevenseg_set `(v ~T0 @X0 1 ef1`us ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 20: void lcd_char(char char_data) {
+[v _lcd_char `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _sevenseg_set ]
-[v _v `us ~T0 @X0 1 r1 ]
+[e :U _lcd_char ]
+[v _char_data `uc ~T0 @X0 1 r1 ]
 [f ]
+"21
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 21:     LATB4 = 1;
+[e = _LATB4 -> -> 1 `i `b ]
+"22
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 22:     write_nibble(char_data >> 4);
+[e ( _write_nibble (1 -> >> -> _char_data `i -> 4 `i `uc ]
 "23
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 23:     ANSELA=0x00; ANSELD=0x00;
-[e = _ANSELA -> -> 0 `i `uc ]
-[e = _ANSELD -> -> 0 `i `uc ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 23:     write_nibble(char_data);
+[e ( _write_nibble (1 _char_data ]
 "24
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 24:     TRISD=0x00;
-[e = _TRISD -> -> 0 `i `uc ]
-"25
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 25:     TRISA0 =0;
-[e = _TRISA0 -> -> 0 `i `b ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 24: }
+[e :UE 853 ]
+}
 "26
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 26:     TRISA1 =0;
-[e = _TRISA1 -> -> 0 `i `b ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 26: void lcd_string(char *text) {
+[v _lcd_string `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _lcd_string ]
+[v _text `*uc ~T0 @X0 1 r1 ]
+[f ]
 "27
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 27:     TRISA2 =0;
-[e = _TRISA2 -> -> 0 `i `b ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 27:     while (*text) {
+[e $U 855  ]
+[e :U 856 ]
+{
 "28
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 28:     TRISA3 =0;
-[e = _TRISA3 -> -> 0 `i `b ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 28:         lcd_char(*text++);
+[e ( _lcd_char (1 *U ++ _text * -> -> 1 `i `x -> -> # *U _text `i `x ]
 "29
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 29:     segments[0] = v % 10u;
-[e = *U + &U _segments * -> -> -> 0 `i `ui `ux -> -> # *U &U _segments `ui `ux -> % -> _v `ui -> 10 `ui `uc ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 29:     }
+}
+[e :U 855 ]
+"27
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 27:     while (*text) {
+[e $ != -> *U _text `i -> 0 `i 856  ]
+[e :U 857 ]
 "30
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 30:     segments[1] = (v/10u) % 10u;
-[e = *U + &U _segments * -> -> -> 1 `i `ui `ux -> -> # *U &U _segments `ui `ux -> % / -> _v `ui -> 10 `ui -> 10 `ui `uc ]
-"31
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 31:     segments[2] = (v/100u) % 10u;
-[e = *U + &U _segments * -> -> -> 2 `i `ui `ux -> -> # *U &U _segments `ui `ux -> % / -> _v `ui -> 100 `ui -> 10 `ui `uc ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 30: }
+[e :UE 854 ]
+}
 "32
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 32:     segments[3] = (v/1000u) % 10u;
-[e = *U + &U _segments * -> -> -> 3 `i `ui `ux -> -> # *U &U _segments `ui `ux -> % / -> _v `ui -> 1000 `ui -> 10 `ui `uc ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 32: void lcd_init() {
+[v _lcd_init `(v ~T0 @X0 1 ef ]
+{
+[e :U _lcd_init ]
+[f ]
 "33
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 33: }
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 33:     _delay((unsigned long)((20)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"34
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 34:     write_nibble(0x03);
+[e ( _write_nibble (1 -> -> 3 `i `uc ]
+"35
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 35:     _delay((unsigned long)((5)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"36
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 36:     write_nibble(0x03);
+[e ( _write_nibble (1 -> -> 3 `i `uc ]
+"37
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 37:     _delay((unsigned long)((5)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"38
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 38:     write_nibble(0x03);
+[e ( _write_nibble (1 -> -> 3 `i `uc ]
+"39
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 39:     _delay((unsigned long)((5)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"40
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 40:     write_nibble(0x02);
+[e ( _write_nibble (1 -> -> 2 `i `uc ]
+"41
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 41:     _delay((unsigned long)((5)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"42
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 42:     write_cmd(0x28);
+[e ( _write_cmd (1 -> -> 40 `i `uc ]
+"43
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 43:     write_cmd(0x0C);
+[e ( _write_cmd (1 -> -> 12 `i `uc ]
+"44
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 44:     write_cmd(0x06);
+[e ( _write_cmd (1 -> -> 6 `i `uc ]
+"45
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 45:     write_cmd(0x01);
+[e ( _write_cmd (1 -> -> 1 `i `uc ]
+"46
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 46:     _delay((unsigned long)((2)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"47
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 47: }
 [e :UE 858 ]
 }
-"35
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 35: void sevenseg_scan(void){
-[v _sevenseg_scan `(v ~T0 @X0 1 ef ]
+"49
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 49: void lcd_setpos(char row, char col) {
+[v _lcd_setpos `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[e :U _sevenseg_scan ]
+[e :U _lcd_setpos ]
+[v _row `uc ~T0 @X0 1 r1 ]
+[v _col `uc ~T0 @X0 1 r2 ]
 [f ]
-"36
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 36:         all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[0]); enable_pos(0);
-[e ( _all_off ..  ]
-[e = _LATD -> -> 0 `i `uc ]
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 8000000 `ul `d .4000000.0 `ul ]
-[e = _LATD ( _seg_for (1 *U + &U _segments * -> -> -> 0 `i `ui `ux -> -> # *U &U _segments `ui `ux ]
-[e ( _enable_pos (1 -> -> 0 `i `uc ]
-"37
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 37:         _delay((unsigned long)((900)*(8000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `ul `d .4000000.0 `ul ]
-"38
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 38:         all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[1]); enable_pos(1);
-[e ( _all_off ..  ]
-[e = _LATD -> -> 0 `i `uc ]
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 8000000 `ul `d .4000000.0 `ul ]
-[e = _LATD ( _seg_for (1 *U + &U _segments * -> -> -> 1 `i `ui `ux -> -> # *U &U _segments `ui `ux ]
-[e ( _enable_pos (1 -> -> 1 `i `uc ]
-"39
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 39:         _delay((unsigned long)((900)*(8000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `ul `d .4000000.0 `ul ]
-"40
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 40:         all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[2]); enable_pos(2);
-[e ( _all_off ..  ]
-[e = _LATD -> -> 0 `i `uc ]
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 8000000 `ul `d .4000000.0 `ul ]
-[e = _LATD ( _seg_for (1 *U + &U _segments * -> -> -> 2 `i `ui `ux -> -> # *U &U _segments `ui `ux ]
-[e ( _enable_pos (1 -> -> 2 `i `uc ]
-"41
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 41:         _delay((unsigned long)((900)*(8000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `ul `d .4000000.0 `ul ]
-"42
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 42:         all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[3]); enable_pos(3);
-[e ( _all_off ..  ]
-[e = _LATD -> -> 0 `i `uc ]
-[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 8000000 `ul `d .4000000.0 `ul ]
-[e = _LATD ( _seg_for (1 *U + &U _segments * -> -> -> 3 `i `ui `ux -> -> # *U &U _segments `ui `ux ]
-[e ( _enable_pos (1 -> -> 3 `i `uc ]
-"43
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 43:         _delay((unsigned long)((900)*(8000000UL/4000000.0)));
-[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `ul `d .4000000.0 `ul ]
-"44
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c: 44: }
+"50
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 50:     char address;
+[v _address `uc ~T0 @X0 1 a ]
+"51
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 51:     if (row == 1) {
+[e $ ! == -> _row `i -> 1 `i 860  ]
+{
+"52
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 52:         address = 0x80 + (col - 1);
+[e = _address -> + -> 128 `i - -> _col `i -> 1 `i `uc ]
+"53
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 53:     } else {
+}
+[e $U 861  ]
+[e :U 860 ]
+{
+"54
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 54:         address = 0xC0 + (col - 1);
+[e = _address -> + -> 192 `i - -> _col `i -> 1 `i `uc ]
+"55
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 55:     }
+}
+[e :U 861 ]
+"56
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 56:     write_cmd(address);
+[e ( _write_cmd (1 _address ]
+"57
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c: 57: }
 [e :UE 859 ]
 }

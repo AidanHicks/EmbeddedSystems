@@ -19,7 +19,7 @@ void enable_pos(unsigned char pos){
 
 unsigned char segments[4];
 
-void set_seven_seg(unsigned short v) {
+void sevenseg_set(unsigned short v) {
     ANSELA=0x00; ANSELD=0x00;
     TRISD=0x00;
     TRISA0 =0;
@@ -32,7 +32,7 @@ void set_seven_seg(unsigned short v) {
     segments[3]  = (v/1000u) % 10u;
 }
 
-void seven_seg_scan(void){
+void sevenseg_scan(void){
         all_off(); LATD=0x00; __delay_us(BLANK_US); LATD=seg_for(segments[0]); enable_pos(0);
         __delay_us(SCAN_ON_US);
         all_off(); LATD=0x00; __delay_us(BLANK_US); LATD=seg_for(segments[1]); enable_pos(1);

@@ -21,6 +21,7 @@
       <itemPath>led.c</itemPath>
       <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c</itemPath>
       <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c</itemPath>
+      <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

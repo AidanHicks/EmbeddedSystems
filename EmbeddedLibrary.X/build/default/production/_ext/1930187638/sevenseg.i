@@ -9647,19 +9647,24 @@ unsigned char __t3rd16on(void);
 
 
 
-void set_led(unsigned char* latch, unsigned char pin, unsigned char state);
+void led_set(unsigned char* latch, unsigned char pin, unsigned char state);
 
 void led_on(unsigned char* latch, unsigned char pin);
 void led_off(unsigned char* latch, unsigned char pin);
 
 
-void clear_led_port(unsigned short* latch);
+void led_clear_port(unsigned short* latch);
 
 unsigned char button_pressed(unsigned char* port, unsigned char button);
 
-void set_seven_seg(unsigned short value);
-void seven_seg_scan();
-void clear_seven_seg();
+void sevenseg_set(unsigned short value);
+void sevenseg_scan();
+void sevenseg_clear();
+
+void lcd_init();
+void lcd_char(char char_data);
+void lcd_string(char *text);
+void lcd_setpos(char row, char col) ;
 # 2 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c" 2
 
 
@@ -9681,7 +9686,7 @@ void enable_pos(unsigned char pos){
 
 unsigned char segments[4];
 
-void set_seven_seg(unsigned short v) {
+void sevenseg_set(unsigned short v) {
     ANSELA=0x00; ANSELD=0x00;
     TRISD=0x00;
     TRISA0 =0;
@@ -9694,7 +9699,7 @@ void set_seven_seg(unsigned short v) {
     segments[3] = (v/1000u) % 10u;
 }
 
-void seven_seg_scan(void){
+void sevenseg_scan(void){
         all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[0]); enable_pos(0);
         _delay((unsigned long)((900)*(8000000UL/4000000.0)));
         all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[1]); enable_pos(1);

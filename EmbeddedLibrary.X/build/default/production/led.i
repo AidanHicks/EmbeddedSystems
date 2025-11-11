@@ -9648,22 +9648,27 @@ unsigned char __t3rd16on(void);
 
 
 
-void set_led(unsigned char* latch, unsigned char pin, unsigned char state);
+void led_set(unsigned char* latch, unsigned char pin, unsigned char state);
 
 void led_on(unsigned char* latch, unsigned char pin);
 void led_off(unsigned char* latch, unsigned char pin);
 
 
-void clear_led_port(unsigned short* latch);
+void led_clear_port(unsigned short* latch);
 
 unsigned char button_pressed(unsigned char* port, unsigned char button);
 
-void set_seven_seg(unsigned short value);
-void seven_seg_scan();
-void clear_seven_seg();
+void sevenseg_set(unsigned short value);
+void sevenseg_scan();
+void sevenseg_clear();
+
+void lcd_init();
+void lcd_char(char char_data);
+void lcd_string(char *text);
+void lcd_setpos(char row, char col) ;
 # 3 "led.c" 2
 
-void set_led(unsigned char* latch, unsigned char pin, unsigned char state) {
+void led_set(unsigned char* latch, unsigned char pin, unsigned char state) {
     *(latch + 0x9) = 0;
 
     if (latch == 0) return;
@@ -9676,9 +9681,9 @@ void set_led(unsigned char* latch, unsigned char pin, unsigned char state) {
     }
 }
 
-void led_on(unsigned char* latch, unsigned char pin) { set_led(latch,pin,1); }
-void led_off(unsigned char* latch, unsigned char pin) { set_led(latch,pin,0); }
+void led_on(unsigned char* latch, unsigned char pin) { led_set(latch,pin,1); }
+void led_off(unsigned char* latch, unsigned char pin) { led_set(latch,pin,0); }
 
-void clear_led(unsigned short* port) {
+void led_clear_port(unsigned short* port) {
     *port = 0;
 }

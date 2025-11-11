@@ -1,7 +1,7 @@
 
 #include "lib.h"
 
-void set_led(unsigned char* latch, unsigned char pin, unsigned char state) {
+void led_set(unsigned char* latch, unsigned char pin, unsigned char state) {
     *(latch + LAT_TO_TRIS_OFFSET) = 0;
     
     if (latch == 0) return;
@@ -14,9 +14,9 @@ void set_led(unsigned char* latch, unsigned char pin, unsigned char state) {
     }
 }
 
-void led_on(unsigned char* latch, unsigned char pin) { set_led(latch,pin,1); }
-void led_off(unsigned char* latch, unsigned char pin) { set_led(latch,pin,0); }
+void led_on(unsigned char* latch, unsigned char pin) { led_set(latch,pin,1); }
+void led_off(unsigned char* latch, unsigned char pin) { led_set(latch,pin,0); }
 
-void clear_led(unsigned short* port) {
+void led_clear_port(unsigned short* port) {
     *port = 0;
 }
