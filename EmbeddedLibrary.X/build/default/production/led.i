@@ -9643,30 +9643,14 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
 # 36 "./lib.h" 2
-
-
-
-
-
+# 3 "led.c" 2
+# 1 "./led.h" 1
+# 12 "./led.h"
 void led_set(unsigned char* latch, unsigned char pin, unsigned char state);
-
 void led_on(unsigned char* latch, unsigned char pin);
 void led_off(unsigned char* latch, unsigned char pin);
-
-
 void led_clear_port(unsigned short* latch);
-
-unsigned char button_pressed(unsigned char* port, unsigned char button);
-
-void sevenseg_set(unsigned short value);
-void sevenseg_scan();
-void sevenseg_clear();
-
-void lcd_init();
-void lcd_char(char char_data);
-void lcd_string(char *text);
-void lcd_setpos(char row, char col) ;
-# 3 "led.c" 2
+# 4 "led.c" 2
 
 void led_set(unsigned char* latch, unsigned char pin, unsigned char state) {
     *(latch + 0x9) = 0;

@@ -9642,31 +9642,14 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
 # 36 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lib.h" 2
-
-
-
-
-
-void led_set(unsigned char* latch, unsigned char pin, unsigned char state);
-
-void led_on(unsigned char* latch, unsigned char pin);
-void led_off(unsigned char* latch, unsigned char pin);
-
-
-void led_clear_port(unsigned short* latch);
-
-unsigned char button_pressed(unsigned char* port, unsigned char button);
-
-void sevenseg_set(unsigned short value);
-void sevenseg_scan();
-void sevenseg_clear();
-
+# 2 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c" 2
+# 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.h" 1
+# 11 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.h"
 void lcd_init();
 void lcd_char(char char_data);
 void lcd_string(char *text);
 void lcd_setpos(char row, char col) ;
-# 2 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c" 2
-
+# 3 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c" 2
 
 void write_nibble(char nibble) {
     LATB0 = (nibble >> 0) & 0x01;

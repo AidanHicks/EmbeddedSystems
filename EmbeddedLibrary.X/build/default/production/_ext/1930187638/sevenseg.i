@@ -9642,30 +9642,14 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
 # 36 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lib.h" 2
-
-
-
-
-
-void led_set(unsigned char* latch, unsigned char pin, unsigned char state);
-
-void led_on(unsigned char* latch, unsigned char pin);
-void led_off(unsigned char* latch, unsigned char pin);
-
-
-void led_clear_port(unsigned short* latch);
-
-unsigned char button_pressed(unsigned char* port, unsigned char button);
-
+# 2 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c" 2
+# 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.h" 1
+# 11 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.h"
+void sevenseg_init();
 void sevenseg_set(unsigned short value);
 void sevenseg_scan();
 void sevenseg_clear();
-
-void lcd_init();
-void lcd_char(char char_data);
-void lcd_string(char *text);
-void lcd_setpos(char row, char col) ;
-# 2 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c" 2
+# 3 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c" 2
 
 
 unsigned char DIG_MAP[4] = {0,1,2,3};
@@ -9677,7 +9661,9 @@ const unsigned char CC_DIGITS[10] =
 {0x3F,0x06,0x5B, 0x4F ,0x66,0x6D,0x7D,0x07,0x7F,0x6F};
 
 unsigned char seg_for(unsigned char d){ return CC_DIGITS[d%10u]; }
+
 void all_off(void){ if (1) LATA=0x00; else LATA=0x0F; }
+
 void enable_pos(unsigned char pos){
     unsigned char mask = DIG_MASKS[ DIG_MAP[pos] ];
     if (1) LATA = mask; else LATA = (unsigned char)(0x0F ^ mask);
@@ -9686,26 +9672,33 @@ void enable_pos(unsigned char pos){
 
 unsigned char segments[4];
 
-void sevenseg_set(unsigned short v) {
-    ANSELA=0x00; ANSELD=0x00;
+void sevenseg_init() {
+    ANSELA=0x00;
+    ANSELD=0x00;
     TRISD=0x00;
     TRISA0 =0;
     TRISA1 =0;
     TRISA2 =0;
     TRISA3 =0;
-    segments[0] = v % 10u;
-    segments[1] = (v/10u) % 10u;
-    segments[2] = (v/100u) % 10u;
-    segments[3] = (v/1000u) % 10u;
+
+    LATA = 0x00;
+    LATD = 0x00;
+}
+
+void sevenseg_set(unsigned short v) {
+    segments[0] = seg_for(v % 10u);
+    segments[1] = seg_for((v/10u) % 10u);
+    segments[2] = seg_for((v/100u) % 10u);
+    segments[3] = seg_for((v/1000u) % 10u);
 }
 
 void sevenseg_scan(void){
-        all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[0]); enable_pos(0);
-        _delay((unsigned long)((900)*(8000000UL/4000000.0)));
-        all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[1]); enable_pos(1);
-        _delay((unsigned long)((900)*(8000000UL/4000000.0)));
-        all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[2]); enable_pos(2);
-        _delay((unsigned long)((900)*(8000000UL/4000000.0)));
-        all_off(); LATD=0x00; _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=seg_for(segments[3]); enable_pos(3);
-        _delay((unsigned long)((900)*(8000000UL/4000000.0)));
+        all_off(); _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=segments[0]; enable_pos(0);
+        _delay((unsigned long)((500)*(8000000UL/4000000.0)));
+        all_off(); _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=segments[1]; enable_pos(1);
+        _delay((unsigned long)((500)*(8000000UL/4000000.0)));
+        all_off(); _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=segments[2]; enable_pos(2);
+        _delay((unsigned long)((500)*(8000000UL/4000000.0)));
+        all_off(); _delay((unsigned long)((80)*(8000000UL/4000000.0))); LATD=segments[3]; enable_pos(3);
+        _delay((unsigned long)((500)*(8000000UL/4000000.0)));
 }

@@ -5,6 +5,11 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>lib.h</itemPath>
+      <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/led.h</itemPath>
+      <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.h</itemPath>
+      <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.h</itemPath>
+      <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.h</itemPath>
+      <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -22,6 +27,7 @@
       <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c</itemPath>
       <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/sevenseg.c</itemPath>
       <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lcd.c</itemPath>
+      <itemPath>C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

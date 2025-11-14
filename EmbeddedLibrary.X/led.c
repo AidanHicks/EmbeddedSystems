@@ -1,5 +1,6 @@
 
 #include "lib.h"
+#include "led.h"
 
 void led_set(unsigned char* latch, unsigned char pin, unsigned char state) {
     *(latch + LAT_TO_TRIS_OFFSET) = 0;

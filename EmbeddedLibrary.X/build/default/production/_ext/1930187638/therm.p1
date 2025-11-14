@@ -1,8 +1,65 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"260 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 260: extern volatile unsigned char ANSELE __attribute__((address(0xF3C)));
+[v _ANSELE `Vuc ~T0 @X0 0 e@3900 ]
+"20510
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 20510: extern volatile __bit TRISE1 __attribute__((address(0x7CB1)));
+[v _TRISE1 `Vb ~T0 @X0 0 e@31921 ]
+"13509
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13509: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"13438
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13438: extern volatile unsigned char ADCON2 __attribute__((address(0xFC0)));
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"13583
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13583:     struct {
+[s S645 :1 `uc 1 :1 `uc 1 ]
+[n S645 . . GO_NOT_DONE ]
+"13587
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13587:     struct {
+[s S646 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S646 . ADON GO_nDONE CHS ]
+"13592
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13592:     struct {
+[s S647 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S647 . . GO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"13601
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13601:     struct {
+[s S648 :1 `uc 1 :1 `uc 1 ]
+[n S648 . . DONE ]
+"13605
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13605:     struct {
+[s S649 :1 `uc 1 :1 `uc 1 ]
+[n S649 . . NOT_DONE ]
+"13609
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13609:     struct {
+[s S650 :1 `uc 1 :1 `uc 1 ]
+[n S650 . . nDONE ]
+"13613
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13613:     struct {
+[s S651 :1 `uc 1 :1 `uc 1 ]
+[n S651 . . GO_DONE ]
+"13617
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13617:     struct {
+[s S652 :1 `uc 1 :1 `uc 1 ]
+[n S652 . . GODONE ]
+"13582
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13582: typedef union {
+[u S644 `S645 1 `S646 1 `S647 1 `S648 1 `S649 1 `S650 1 `S651 1 `S652 1 ]
+[n S644 . . . . . . . . . ]
+"13622
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13622: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
+[v _ADCON0bits `VS644 ~T0 @X0 0 e@4034 ]
 [v F205 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.00\pic\include/builtins.h
 [v __delay `JF205 ~T0 @X0 0 e ]
 [p i __delay ]
+"13729 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13729: extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"13709
+[; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 13709: extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -759,87 +816,100 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17372
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"8 C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 8: unsigned char get_button_state(unsigned char* port, unsigned char button) {
-[v _get_button_state `(uc ~T0 @X0 1 ef2`*uc`uc ]
+"4 C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 4: void therm_init() {
+[v _therm_init `(v ~T0 @X0 1 ef ]
 {
-[e :U _get_button_state ]
-[v _port `*uc ~T0 @X0 1 r1 ]
-[v _button `uc ~T0 @X0 1 r2 ]
+[e :U _therm_init ]
 [f ]
+"5
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 5:     ANSELE = 0x02;
+[e = _ANSELE -> -> 2 `i `uc ]
+"6
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 6:     TRISE1 = 1;
+[e = _TRISE1 -> -> 1 `i `b ]
+"7
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 7:     ADCON1 = 0x00;
+[e = _ADCON1 -> -> 0 `i `uc ]
+"8
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 8:     ADCON2 = 0xA9;
+[e = _ADCON2 -> -> 169 `i `uc ]
 "9
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 9:     unsigned char button_state = *port;
-[v _button_state `uc ~T0 @X0 1 a ]
-[e = _button_state *U _port ]
-"10
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 10:     return (button_state & (1 << button)) >> button;
-[e ) -> >> & -> _button_state `i << -> 1 `i -> _button `i -> _button `i `uc ]
-[e $UE 851  ]
-"11
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 11: }
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 9: }
 [e :UE 851 ]
 }
+"11
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 11: unsigned int VREF_mV = 5000u;
+[v _VREF_mV `ui ~T0 @X0 1 e ]
+[i _VREF_mV
+-> 5000 `ui
+]
 "12
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 12: unsigned char prevs[36];
-[v _prevs `uc ~T0 @X0 -> 36 `i e ]
-"13
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 13: unsigned char button_pressed(unsigned char* port, unsigned char button) {
-[v _button_pressed `(uc ~T0 @X0 1 ef2`*uc`uc ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 12: unsigned int adc_to_Celsius(unsigned int adc){
+[v _adc_to_Celsius `(ui ~T0 @X0 1 ef1`ui ]
 {
-[e :U _button_pressed ]
-[v _port `*uc ~T0 @X0 1 r1 ]
-[v _button `uc ~T0 @X0 1 r2 ]
+[e :U _adc_to_Celsius ]
+[v _adc `ui ~T0 @X0 1 r1 ]
 [f ]
+"13
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 13:     unsigned long t = (unsigned long)adc;
+[v _t `ul ~T0 @X0 1 a ]
+[e = _t -> _adc `ul ]
+"14
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 14:     t = t * (unsigned long)VREF_mV;
+[e = _t * _t -> _VREF_mV `ul ]
 "15
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 15:     unsigned char tris = *(port + 0x12);
-[v _tris `uc ~T0 @X0 1 a ]
-[e = _tris *U + _port * -> -> 18 `i `x -> -> # *U _port `i `x ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 15:     t = (t + 511ul) / 1023ul;
+[e = _t / + _t -> 511 `ul -> 1023 `ul ]
 "16
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 16:     tris = tris | (1 << button);
-[e = _tris -> | -> _tris `i << -> 1 `i -> _button `i `uc ]
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 16:     t = t / 10ul;
+[e = _t / _t -> 10 `ul ]
 "17
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 17:     unsigned char* ansel = (unsigned char*)(port - 72);
-[v _ansel `*uc ~T0 @X0 1 a ]
-[e = _ansel - _port * -> -> 72 `i `x -> -> # *U _port `i `x ]
-"18
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 18:     *ansel = 0x0;
-[e = *U _ansel -> -> 0 `i `uc ]
-"22
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 22:     unsigned char index = ((unsigned short)port - 0xF80) * 8 + button;
-[v _index `uc ~T0 @X0 1 a ]
-[e = _index -> + * - -> -> _port `us `ui -> -> 3968 `i `ui -> -> 8 `i `ui -> _button `ui `uc ]
-"25
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 25:     unsigned char now = get_button_state(port,button);
-[v _now `uc ~T0 @X0 1 a ]
-[e = _now ( _get_button_state (2 , _port _button ]
-"26
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 26:     if (prevs[index] == 1u && now == 0u) {
-[e $ ! && == -> *U + &U _prevs * -> _index `ux -> -> # *U &U _prevs `ui `ux `ui -> 1 `ui == -> _now `ui -> 0 `ui 853  ]
-{
-"27
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 27:         _delay((unsigned long)((30)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"28
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 28:         if (get_button_state(port,button) == 0u) { prevs[index] = 0u; return 1u; }
-[e $ ! == -> ( _get_button_state (2 , _port _button `ui -> 0 `ui 854  ]
-{
-[e = *U + &U _prevs * -> _index `ux -> -> # *U &U _prevs `ui `ux -> -> 0 `ui `uc ]
-[e ) -> -> 1 `ui `uc ]
-[e $UE 852  ]
-}
-[e :U 854 ]
-"29
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 29:     }
-}
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 17:     if(t>9999ul) t=9999ul;
+[e $ ! > _t -> 9999 `ul 853  ]
+[e = _t -> 9999 `ul ]
 [e :U 853 ]
-"30
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 30:     prevs[index] = now;
-[e = *U + &U _prevs * -> _index `ux -> -> # *U &U _prevs `ui `ux _now ]
-"31
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 31:     return 0u;
-[e ) -> -> 0 `ui `uc ]
+"18
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 18:     return (unsigned int)t;
+[e ) -> _t `ui ]
 [e $UE 852  ]
-"32
-[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c: 32: }
+"19
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 19: }
 [e :UE 852 ]
+}
+"21
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 21: unsigned int therm_get_sample(unsigned char ch){
+[v _therm_get_sample `(ui ~T0 @X0 1 ef1`uc ]
+{
+[e :U _therm_get_sample ]
+[v _ch `uc ~T0 @X0 1 r1 ]
+[f ]
+"22
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 22:     ADCON0bits.CHS = ch;
+[e = . . _ADCON0bits 1 2 _ch ]
+"23
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 23:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+"24
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 24:     _delay((unsigned long)((2)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"25
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 25:     ADCON0bits.GO_nDONE = 1;
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"26
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 26:     while(ADCON0bits.GO_nDONE){}
+[e $U 855  ]
+[e :U 856 ]
+{
+}
+[e :U 855 ]
+[e $ != -> . . _ADCON0bits 1 1 `i -> 0 `i 856  ]
+[e :U 857 ]
+"27
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 27:     return adc_to_Celsius((unsigned int)((((unsigned int)ADRESH) << 8) | ADRESL));
+[e ) ( _adc_to_Celsius (1 | << -> _ADRESH `ui -> 8 `i -> _ADRESL `ui ]
+[e $UE 854  ]
+"28
+[; ;C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c: 28: }
+[e :UE 854 ]
 }

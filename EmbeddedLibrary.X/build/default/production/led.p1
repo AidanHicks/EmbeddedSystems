@@ -755,8 +755,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17372
 [; ;C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h: 17372: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"4 led.c
-[; ;led.c: 4: void led_set(unsigned char* latch, unsigned char pin, unsigned char state) {
+"5 led.c
+[; ;led.c: 5: void led_set(unsigned char* latch, unsigned char pin, unsigned char state) {
 [v _led_set `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
 {
 [e :U _led_set ]
@@ -764,46 +764,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _pin `uc ~T0 @X0 1 r2 ]
 [v _state `uc ~T0 @X0 1 r3 ]
 [f ]
-"5
-[; ;led.c: 5:     *(latch + 0x9) = 0;
+"6
+[; ;led.c: 6:     *(latch + 0x9) = 0;
 [e = *U + _latch * -> -> 9 `i `x -> -> # *U _latch `i `x -> -> 0 `i `uc ]
-"7
-[; ;led.c: 7:     if (latch == 0) return;
+"8
+[; ;led.c: 8:     if (latch == 0) return;
 [e $ ! == _latch -> -> 0 `i `*uc 852  ]
 [e $UE 851  ]
 [e :U 852 ]
-"8
-[; ;led.c: 8:     unsigned char mask = 1 << pin;
+"9
+[; ;led.c: 9:     unsigned char mask = 1 << pin;
 [v _mask `uc ~T0 @X0 1 a ]
 [e = _mask -> << -> 1 `i -> _pin `i `uc ]
-"9
-[; ;led.c: 9:     if (state) {
+"10
+[; ;led.c: 10:     if (state) {
 [e $ ! != -> _state `i -> 0 `i 853  ]
 {
-"10
-[; ;led.c: 10:         *latch |= mask;
-[e =| *U _latch -> _mask `uc ]
 "11
-[; ;led.c: 11:     }
+[; ;led.c: 11:         *latch |= mask;
+[e =| *U _latch -> _mask `uc ]
+"12
+[; ;led.c: 12:     }
 }
 [e $U 854  ]
-"12
-[; ;led.c: 12:     else {
+"13
+[; ;led.c: 13:     else {
 [e :U 853 ]
 {
-"13
-[; ;led.c: 13:         *latch &= ~mask;
-[e =& *U _latch -> ~ -> _mask `i `uc ]
 "14
-[; ;led.c: 14:     }
+[; ;led.c: 14:         *latch &= ~mask;
+[e =& *U _latch -> ~ -> _mask `i `uc ]
+"15
+[; ;led.c: 15:     }
 }
 [e :U 854 ]
-"15
-[; ;led.c: 15: }
+"16
+[; ;led.c: 16: }
 [e :UE 851 ]
 }
-"17
-[; ;led.c: 17: void led_on(unsigned char* latch, unsigned char pin) { led_set(latch,pin,1); }
+"18
+[; ;led.c: 18: void led_on(unsigned char* latch, unsigned char pin) { led_set(latch,pin,1); }
 [v _led_on `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
 [e :U _led_on ]
@@ -813,8 +813,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _led_set (3 , , _latch _pin -> -> 1 `i `uc ]
 [e :UE 855 ]
 }
-"18
-[; ;led.c: 18: void led_off(unsigned char* latch, unsigned char pin) { led_set(latch,pin,0); }
+"19
+[; ;led.c: 19: void led_off(unsigned char* latch, unsigned char pin) { led_set(latch,pin,0); }
 [v _led_off `(v ~T0 @X0 1 ef2`*uc`uc ]
 {
 [e :U _led_off ]
@@ -824,17 +824,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _led_set (3 , , _latch _pin -> -> 0 `i `uc ]
 [e :UE 856 ]
 }
-"20
-[; ;led.c: 20: void led_clear_port(unsigned short* port) {
+"21
+[; ;led.c: 21: void led_clear_port(unsigned short* port) {
 [v _led_clear_port `(v ~T0 @X0 1 ef1`*us ]
 {
 [e :U _led_clear_port ]
 [v _port `*us ~T0 @X0 1 r1 ]
 [f ]
-"21
-[; ;led.c: 21:     *port = 0;
-[e = *U _port -> -> 0 `i `us ]
 "22
-[; ;led.c: 22: }
+[; ;led.c: 22:     *port = 0;
+[e = *U _port -> -> 0 `i `us ]
+"23
+[; ;led.c: 23: }
 [e :UE 857 ]
 }

@@ -1,4 +1,4 @@
-# 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c"
+# 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 285 "<built-in>" 3
@@ -6,9 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c" 2
-
-
+# 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c" 2
 # 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lib.h" 1
 # 35 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lib.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 1 3
@@ -9644,36 +9642,35 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\include/xc.h" 2 3
 # 36 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/lib.h" 2
-# 4 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c" 2
-# 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.h" 1
-# 11 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.h"
-unsigned char button_pressed(unsigned char* port, unsigned char button);
-# 5 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/button.c" 2
+# 2 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c" 2
+# 1 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.h" 1
+# 11 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.h"
+void therm_init();
+unsigned int therm_get_sample(unsigned char ch);
+# 3 "C:/Users/767905/MPLABXProjects/EmbeddedLibrary.X/therm.c" 2
 
-
-
-unsigned char get_button_state(unsigned char* port, unsigned char button) {
-    unsigned char button_state = *port;
-    return (button_state & (1 << button)) >> button;
+void therm_init() {
+    ANSELE = 0x02;
+    TRISE1 = 1;
+    ADCON1 = 0x00;
+    ADCON2 = 0xA9;
 }
-unsigned char prevs[36];
-unsigned char button_pressed(unsigned char* port, unsigned char button) {
 
-    unsigned char tris = *(port + 0x12);
-    tris = tris | (1 << button);
-    unsigned char* ansel = (unsigned char*)(port - 72);
-    *ansel = 0x0;
+unsigned int VREF_mV = 5000u;
+unsigned int adc_to_Celsius(unsigned int adc){
+    unsigned long t = (unsigned long)adc;
+    t = t * (unsigned long)VREF_mV;
+    t = (t + 511ul) / 1023ul;
+    t = t / 10ul;
+    if(t>9999ul) t=9999ul;
+    return (unsigned int)t;
+}
 
-
-
-    unsigned char index = ((unsigned short)port - 0xF80) * 8 + button;
-
-
-    unsigned char now = get_button_state(port,button);
-    if (prevs[index] == 1u && now == 0u) {
-        _delay((unsigned long)((30)*(8000000UL/4000.0)));
-        if (get_button_state(port,button) == 0u) { prevs[index] = 0u; return 1u; }
-    }
-    prevs[index] = now;
-    return 0u;
+unsigned int therm_get_sample(unsigned char ch){
+    ADCON0bits.CHS = ch;
+    ADCON0bits.ADON = 1;
+    _delay((unsigned long)((2)*(8000000UL/4000.0)));
+    ADCON0bits.GO_nDONE = 1;
+    while(ADCON0bits.GO_nDONE){}
+    return adc_to_Celsius((unsigned int)((((unsigned int)ADRESH) << 8) | ADRESL));
 }

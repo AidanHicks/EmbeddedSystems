@@ -1,5 +1,5 @@
 #include "lib.h"
-
+#include "lcd.h"
 
 void write_nibble(char nibble) {
     LATB0 = (nibble >> 0) & 0x01;
