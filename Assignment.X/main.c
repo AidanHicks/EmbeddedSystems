@@ -102,7 +102,6 @@ void Update_Display() {
     
     switch(current_state) {
         case VIEW_MAIN:
-            // Format with fixed width or padding
             sprintf(buffer, "Time: %02d:%02d:%02d  ", currentTime.hour, currentTime.min, currentTime.sec);
             LCD_Set_Cursor(1,0); LCD_String(buffer);
             
@@ -114,7 +113,6 @@ void Update_Display() {
             
         case MENU_SET_TEMP_LOW:
             LCD_Set_Cursor(1,0); LCD_String("Set Temp LOW:   ");
-            // Added spaces padding to clear previous digits if number shrinks
             sprintf(buffer, "%d C        ", settings.temp_low); 
             LCD_Set_Cursor(2,0); LCD_String(buffer);
             break;
@@ -148,7 +146,7 @@ void Handle_Input() {
     unsigned char btn = Button_Read();
     if(btn == 0) return;
     
-    // Silence alarm if active
+    // Silence alarm if any button is pressed
     if(alarm_active) {
         alarm_active = 0;
         return;
@@ -157,7 +155,7 @@ void Handle_Input() {
     // State Machine Navigation
     switch(current_state) {
         case VIEW_MAIN:
-            if(btn == 3) current_state = MENU_SET_TEMP_LOW; // Enter
+            if(btn == 3) current_state = MENU_SET_TEMP_LOW;
             break;
             
         case MENU_SET_TEMP_LOW:
@@ -183,8 +181,8 @@ void Handle_Input() {
             break;
             
         case MENU_SET_HEAT_END:
-            if(btn == 1) settings.heat_end_hour++;
-            if(btn == 2) settings.heat_end_min += 15;
+            if(btn == 2) settings.heat_end_hour++;
+            if(btn == 1) settings.heat_end_min += 15;
              if(settings.heat_end_min >= 60) { settings.heat_end_min = 0; }
             if(settings.heat_end_hour >= 24) settings.heat_end_hour = 0;
             if(btn == 3) current_state = MENU_SAVE;
@@ -207,7 +205,6 @@ void Handle_Input() {
 }
 
 void main(void) {
-    // FIX 1: Set Internal Oscillator to 8MHz explicitly
     OSCCON = 0x66; 
 
     // Initialization
@@ -224,7 +221,7 @@ void main(void) {
     // Enable Interrupts
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
-
+    RTC_Set_Time(11,07);
     while(1) {
         // 1. Read Hardware
         if(system_ticks % 100 == 0) {

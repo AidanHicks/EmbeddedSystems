@@ -7,12 +7,10 @@ void Write_Byte(unsigned char addr, unsigned char data) {
     EECON1bits.EEPGD = 0;
     EECON1bits.CFGS = 0;
     EECON1bits.WREN = 1;
-    INTCONbits.GIE = 0; // Disable Interrupts
     EECON2 = 0x55;
     EECON2 = 0xAA;
     EECON1bits.WR = 1;
     while(EECON1bits.WR); // Wait
-    INTCONbits.GIE = 1; // Re-enable
     EECON1bits.WREN = 0;
 }
 
