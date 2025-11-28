@@ -1,29 +1,29 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\767905\AppData\Local\Temp\xcAs460.\driver_tmp_3.o
- -Odist/default/production\Assignment.X.production.hex
- -logfile=dist/default/production\Assignment.X.production.hxl
+ C:\Users\767905\AppData\Local\Temp\xcAs159c.\driver_tmp_3.o
+ -Odist/default/debug\Assignment.X.debug.hex
+ -logfile=dist/default/debug\Assignment.X.debug.hxl
  -addressing=1
  -break=300000
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\767905\AppData\Local\Temp\xcAs460.\driver_tmp_3.o)
-  8h - 3Fh		(C:\Users\767905\AppData\Local\Temp\xcAs460.\driver_tmp_3.o)
-  600h - 6D8h		(C:\Users\767905\AppData\Local\Temp\xcAs460.\driver_tmp_3.o)
-  6DAh - 24B9h		(C:\Users\767905\AppData\Local\Temp\xcAs460.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\767905\AppData\Local\Temp\xcAs460.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\767905\AppData\Local\Temp\xcAs159c.\driver_tmp_3.o)
+  8h - 3Fh		(C:\Users\767905\AppData\Local\Temp\xcAs159c.\driver_tmp_3.o)
+  600h - 6D8h		(C:\Users\767905\AppData\Local\Temp\xcAs159c.\driver_tmp_3.o)
+  6DAh - 24C9h		(C:\Users\767905\AppData\Local\Temp\xcAs159c.\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\767905\AppData\Local\Temp\xcAs159c.\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   40h - 5FFh
   6D9h - 6D9h
-  24BAh - 2FFFFFh
+  24CAh - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\767905\AppData\Local\Temp\xcAs460.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\767905\AppData\Local\Temp\xcAs159c.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -523,7 +523,8 @@
 00002480 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002490 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000024A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000024B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
+000024B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000024C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --

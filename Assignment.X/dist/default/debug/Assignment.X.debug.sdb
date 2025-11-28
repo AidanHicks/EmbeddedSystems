@@ -14,13 +14,13 @@ MENU_SET_ALARM 5
 MENU_SET_TONE 6
 MENU_SAVE 7
 ]
-"11 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
+"10 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
 [v _Controls_Init Controls_Init `(v  1 e 1 0 ]
-"22
+"21
 [v _Get_Button Get_Button `(uc  1 e 1 0 ]
-"40
+"38
 [v _Button_Read Button_Read `(uc  1 e 1 0 ]
-"63
+"61
 [v _Buzzer_Play Buzzer_Play `(v  1 e 1 0 ]
 "1 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
@@ -169,22 +169,20 @@ MENU_SAVE 7
 "9 C:\Users\767905\MPLABXProjects\Assignment.X/config_bits.h
 [v _system_ticks system_ticks `VEul  1 e 4 0 ]
 "4 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
-[v _last_btn_up last_btn_up `uc  1 e 1 0 ]
+[v _last_btn_up last_btn_up `ul  1 e 4 0 ]
 "5
-[v _last_btn_down last_btn_down `uc  1 e 1 0 ]
+[v _last_btn_down last_btn_down `ul  1 e 4 0 ]
 "6
-[v _last_btn_enter last_btn_enter `uc  1 e 1 0 ]
+[v _last_btn_enter last_btn_enter `ul  1 e 4 0 ]
 "7
-[v _last_btn_back last_btn_back `uc  1 e 1 0 ]
-"8
-[v _last_check last_check `ul  1 e 4 0 ]
+[v _last_btn_back last_btn_back `ul  1 e 4 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC18F-K_DFP/1.14.301/xc8\pic\include\proc/pic18f45k22.h
 [v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
 "97
 [v _ANSELB ANSELB `VEuc  1 e 1 @3897 ]
 "147
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
-[s S985 . 1 `uc 1 . 1 0 :2:0 
+[s S983 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
 `uc 1 ANSC4 1 0 :1:4 
@@ -193,19 +191,19 @@ MENU_SAVE 7
 `uc 1 ANSC7 1 0 :1:7 
 ]
 "163
-[u S993 . 1 `S985 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES993  1 e 1 @3898 ]
+[u S991 . 1 `S983 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES991  1 e 1 @3898 ]
 "198
 [v _ANSELD ANSELD `VEuc  1 e 1 @3899 ]
 "260
 [v _ANSELE ANSELE `VEuc  1 e 1 @3900 ]
-[s S1137 . 1 `uc 1 ANSE0 1 0 :1:0 
+[s S1135 . 1 `uc 1 ANSE0 1 0 :1:0 
 `uc 1 ANSE1 1 0 :1:1 
 `uc 1 ANSE2 1 0 :1:2 
 ]
 "272
-[u S1141 . 1 `S1137 1 . 1 0 ]
-[v _ANSELEbits ANSELEbits `VES1141  1 e 1 @3900 ]
+[u S1139 . 1 `S1135 1 . 1 0 ]
+[v _ANSELEbits ANSELEbits `VES1139  1 e 1 @3900 ]
 "2719
 [v _WPUB WPUB `VEuc  1 e 1 @3937 ]
 "2781
@@ -275,7 +273,7 @@ MENU_SAVE 7
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 "7672
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
-[s S1379 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1377 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -285,7 +283,7 @@ MENU_SAVE 7
 `uc 1 LATB7 1 0 :1:7 
 ]
 "7699
-[s S1388 . 1 `uc 1 LB0 1 0 :1:0 
+[s S1386 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -294,8 +292,8 @@ MENU_SAVE 7
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S1397 . 1 `S1379 1 . 1 0 `S1388 1 . 1 0 ]
-[v _LATBbits LATBbits `VES1397  1 e 1 @3978 ]
+[u S1395 . 1 `S1377 1 . 1 0 `S1386 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1395  1 e 1 @3978 ]
 "7784
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
 [s S671 . 1 `uc 1 LATC0 1 0 :1:0 
@@ -371,7 +369,7 @@ MENU_SAVE 7
 [v _TRISEbits TRISEbits `VES487  1 e 1 @3990 ]
 "9064
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
-[s S881 . 1 `uc 1 RD 1 0 :1:0 
+[s S879 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -381,57 +379,57 @@ MENU_SAVE 7
 `uc 1 EEPGD 1 0 :1:7 
 ]
 "10190
-[s S890 . 1 `uc 1 . 1 0 :6:0 
+[s S888 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 EEFS 1 0 :1:6 
 ]
-[u S893 . 1 `S881 1 . 1 0 `S890 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES893  1 e 1 @4006 ]
+[u S891 . 1 `S879 1 . 1 0 `S888 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES891  1 e 1 @4006 ]
 "10235
 [v _EECON2 EECON2 `VEuc  1 e 1 @4007 ]
 "10255
 [v _EEDATA EEDATA `VEuc  1 e 1 @4008 ]
 "10275
 [v _EEADR EEADR `VEuc  1 e 1 @4009 ]
-[s S1249 . 1 `uc 1 ADCS 1 0 :3:0 
+[s S1247 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "13459
-[s S1254 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S1252 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
 `uc 1 ACQT1 1 0 :1:4 
 `uc 1 ACQT2 1 0 :1:5 
 ]
-[u S1261 . 1 `S1249 1 . 1 0 `S1254 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES1261  1 e 1 @4032 ]
-[s S1218 . 1 `uc 1 NVCFG 1 0 :2:0 
+[u S1259 . 1 `S1247 1 . 1 0 `S1252 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES1259  1 e 1 @4032 ]
+[s S1216 . 1 `uc 1 NVCFG 1 0 :2:0 
 `uc 1 PVCFG 1 0 :2:2 
 `uc 1 . 1 0 :3:4 
 `uc 1 TRIGSEL 1 0 :1:7 
 ]
 "13532
-[s S1223 . 1 `uc 1 NVCFG0 1 0 :1:0 
+[s S1221 . 1 `uc 1 NVCFG0 1 0 :1:0 
 `uc 1 NVCFG1 1 0 :1:1 
 `uc 1 PVCFG0 1 0 :1:2 
 `uc 1 PVCFG1 1 0 :1:3 
 ]
-[s S1228 . 1 `uc 1 . 1 0 :3:0 
+[s S1226 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CHSN3 1 0 :1:3 
 ]
-[u S1231 . 1 `S1218 1 . 1 0 `S1223 1 . 1 0 `S1228 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES1231  1 e 1 @4033 ]
-[s S1148 . 1 `uc 1 . 1 0 :1:0 
+[u S1229 . 1 `S1216 1 . 1 0 `S1221 1 . 1 0 `S1226 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES1229  1 e 1 @4033 ]
+[s S1146 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "13622
-[s S1151 . 1 `uc 1 ADON 1 0 :1:0 
+[s S1149 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S1155 . 1 `uc 1 . 1 0 :1:0 
+[s S1153 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -439,23 +437,23 @@ MENU_SAVE 7
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S1163 . 1 `uc 1 . 1 0 :1:0 
+[s S1161 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S1166 . 1 `uc 1 . 1 0 :1:0 
+[s S1164 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S1169 . 1 `uc 1 . 1 0 :1:0 
+[s S1167 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S1172 . 1 `uc 1 . 1 0 :1:0 
+[s S1170 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S1175 . 1 `uc 1 . 1 0 :1:0 
+[s S1173 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S1178 . 1 `S1148 1 . 1 0 `S1151 1 . 1 0 `S1155 1 . 1 0 `S1163 1 . 1 0 `S1166 1 . 1 0 `S1169 1 . 1 0 `S1172 1 . 1 0 `S1175 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES1178  1 e 1 @4034 ]
+[u S1176 . 1 `S1146 1 . 1 0 `S1149 1 . 1 0 `S1153 1 . 1 0 `S1161 1 . 1 0 `S1164 1 . 1 0 `S1167 1 . 1 0 `S1170 1 . 1 0 `S1173 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1176  1 e 1 @4034 ]
 "13709
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "13729
@@ -496,7 +494,7 @@ MENU_SAVE 7
 [v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
 "16012
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S1311 . 1 `uc 1 T0PS 1 0 :3:0 
+[s S1309 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -504,12 +502,12 @@ MENU_SAVE 7
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "16115
-[s S1318 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S1316 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 ]
-[u S1322 . 1 `S1311 1 . 1 0 `S1318 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES1322  1 e 1 @4053 ]
+[u S1320 . 1 `S1309 1 . 1 0 `S1316 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES1320  1 e 1 @4053 ]
 "16172
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "16192
@@ -628,10 +626,10 @@ MENU_SAVE 7
 "9 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S1886 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[u S1884 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
 "13
-[s S1889 _IO_FILE 11 `S1886 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S1889  1 a 11 57 ]
+[s S1887 _IO_FILE 11 `S1884 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S1887  1 a 11 57 ]
 "12
 [v sprintf@ap ap `[1]*.30v  1 a 1 56 ]
 "9
@@ -644,9 +642,9 @@ MENU_SAVE 7
 {
 "1820
 [v vfprintf@cfmt cfmt `*.31uc  1 a 1 47 ]
-[s S1921 _IO_FILE 0 ]
+[s S1919 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.30S1921  1 p 1 44 ]
+[v vfprintf@fp fp `*.30S1919  1 p 1 44 ]
 [v vfprintf@fmt fmt `*.31Cuc  1 p 1 45 ]
 [v vfprintf@ap ap `*.30*.30v  1 p 1 46 ]
 "1840
@@ -654,16 +652,16 @@ MENU_SAVE 7
 "1177
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S1945 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+[u S1943 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
 "1188
-[v vfpfcnvrt@convarg convarg `S1945  1 a 4 38 ]
+[v vfpfcnvrt@convarg convarg `S1943  1 a 4 38 ]
 "1180
 [v vfpfcnvrt@done done `a  1 a 1 43 ]
 "1179
 [v vfpfcnvrt@cp cp `*.31uc  1 a 1 42 ]
-[s S1921 _IO_FILE 0 ]
+[s S1919 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.30S1921  1 p 1 33 ]
+[v vfpfcnvrt@fp fp `*.30S1919  1 p 1 33 ]
 [v vfpfcnvrt@fmt fmt `*.30*.31uc  1 p 1 34 ]
 [v vfpfcnvrt@ap ap `*.39*.30v  1 p 2 35 ]
 "1814
@@ -679,9 +677,9 @@ MENU_SAVE 7
 [v stoa@w w `i  1 a 2 17 ]
 "945
 [v stoa@p p `i  1 a 2 15 ]
-[s S1921 _IO_FILE 0 ]
+[s S1919 _IO_FILE 0 ]
 "942
-[v stoa@fp fp `*.30S1921  1 p 1 10 ]
+[v stoa@fp fp `*.30S1919  1 p 1 10 ]
 [v stoa@s s `*.35uc  1 p 2 11 ]
 "997
 } 0
@@ -707,9 +705,9 @@ MENU_SAVE 7
 [v dtoa@s s `uc  1 a 1 30 ]
 "520
 [v dtoa@p p `a  1 a 1 27 ]
-[s S1921 _IO_FILE 0 ]
+[s S1919 _IO_FILE 0 ]
 "513
-[v dtoa@fp fp `*.30S1921  1 p 1 22 ]
+[v dtoa@fp fp `*.30S1919  1 p 1 22 ]
 [v dtoa@d d `i  1 p 2 23 ]
 "583
 } 0
@@ -718,9 +716,9 @@ MENU_SAVE 7
 {
 "195
 [v pad@i i `i  1 a 2 20 ]
-[s S1921 _IO_FILE 0 ]
+[s S1919 _IO_FILE 0 ]
 "193
-[v pad@fp fp `*.30S1921  1 p 1 15 ]
+[v pad@fp fp `*.30S1919  1 p 1 15 ]
 [v pad@buf buf `*.30uc  1 p 1 16 ]
 [v pad@p p `i  1 p 2 17 ]
 "226
@@ -734,18 +732,18 @@ MENU_SAVE 7
 [v fputs@c c `uc  1 a 1 12 ]
 "8
 [v fputs@s s `*.30Cuc  1 p 1 10 ]
-[u S1886 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
-[s S1889 _IO_FILE 11 `S1886 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.30S1889  1 p 1 11 ]
+[u S1884 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[s S1887 _IO_FILE 11 `S1884 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.30S1887  1 p 1 11 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 2 ]
-[u S1886 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
-[s S1889 _IO_FILE 11 `S1886 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.30S1889  1 p 1 4 ]
+[u S1884 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[s S1887 _IO_FILE 11 `S1884 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.30S1887  1 p 1 4 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\putch.c
@@ -973,17 +971,17 @@ MENU_SAVE 7
 [v LCD_Nibble@nibble nibble `uc  1 p 1 3 ]
 "13
 } 0
-"40 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
+"38 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
 [v _Button_Read Button_Read `(uc  1 e 1 0 ]
 {
-"61
+"59
 } 0
-"22
+"21
 [v _Get_Button Get_Button `(uc  1 e 1 0 ]
 {
 [v Get_Button@button button `us  1 p 2 2 ]
-[v Get_Button@last last `*.30uc  1 p 1 4 ]
-"38
+[v Get_Button@last last `*.30ul  1 p 1 4 ]
+"36
 } 0
 "72 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
 [v _Handle_Alarm Handle_Alarm `(v  1 e 1 0 ]
@@ -1000,17 +998,17 @@ MENU_SAVE 7
 [v ___llmod@divisor divisor `ul  1 p 4 6 ]
 "25
 } 0
-"63 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
+"61 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
 [v _Buzzer_Play Buzzer_Play `(v  1 e 1 0 ]
 {
 [v Buzzer_Play@tone_type tone_type `uc  1 p 1 wreg ]
-"64
+"62
 [v Buzzer_Play@i i `ui  1 a 2 3 ]
-"63
+"61
 [v Buzzer_Play@tone_type tone_type `uc  1 p 1 wreg ]
-"65
+"63
 [v Buzzer_Play@tone_type tone_type `uc  1 p 1 2 ]
-"80
+"78
 } 0
 "25 C:\Users\767905\MPLABXProjects\Assignment.X\eeprom.c
 [v _EEPROM_Load_Settings EEPROM_Load_Settings `(v  1 e 1 0 ]
@@ -1046,10 +1044,10 @@ MENU_SAVE 7
 [v Write_Byte@addr addr `uc  1 p 1 3 ]
 "15
 } 0
-"11 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
+"10 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
 [v _Controls_Init Controls_Init `(v  1 e 1 0 ]
 {
-"19
+"18
 } 0
 "48 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
 [v _Check_Heating_Logic Check_Heating_Logic `(v  1 e 1 0 ]

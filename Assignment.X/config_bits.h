@@ -6,6 +6,8 @@
 
 #define _XTAL_FREQ 8000000      // 8MHz Clock
 
+inline volatile unsigned long system_ticks = 0;
+
 // Global Structure for Settings
 typedef struct {
     unsigned char temp_low;

@@ -31,12 +31,11 @@ typedef enum {
     MENU_SAVE
 } MenuState;
 
-MenuState current_state = VIEW_MAIN;
+MenuState current_state = MENU_SET_TEMP_LOW;
 // FIX: Track the last state to detect changes
 MenuState last_drawn_state = 255; 
 
 // Global Tick Counter (incremented in ISR)
-volatile unsigned long system_ticks = 0;
 
 void __interrupt() ISR(void) {
     // Timer0 for 7-Seg and System Ticks
@@ -245,6 +244,5 @@ void main(void) {
             Update_Display();
         }
         
-        __delay_ms(5);
     }
 }

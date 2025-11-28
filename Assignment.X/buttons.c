@@ -5,6 +5,7 @@ unsigned char last_btn_up = 0;
 unsigned char last_btn_down = 0;
 unsigned char last_btn_enter = 0;
 unsigned char last_btn_back = 0;
+unsigned long last_check = 0;
 
 
 void Controls_Init(void) {
@@ -20,11 +21,13 @@ void Controls_Init(void) {
 
 unsigned char Get_Button(unsigned short button, unsigned char* last) {
     static unsigned char button_down = 0;
+    if ((system_ticks - last_check) < 10) return 0;
+    
     if (button) {
         if (*last == 0) {
-            __delay_ms(10);
             if (button) {
                 *last = 1;
+                last_check = system_ticks;
                 return 1;
             }
         }
