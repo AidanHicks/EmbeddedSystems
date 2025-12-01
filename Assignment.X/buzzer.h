@@ -9,26 +9,30 @@
 #define BUZZER_H
 
 #include <xc.h>
-#include <stdint.h>
 
-#define BUZZER_LAT LATCbits.LATC2
-#define BUZZER_TRIS TRISCbits.TRISC2
-#define BUZZER_ANSEL ANSELCbits.ANSC2
+// Buzzer on RE1
+#define BUZZER_LAT LATEbits.LATE1
+#define BUZZER_TRIS TRISEbits.TRISE1
+#define BUZZER_ANSEL ANSELEbits.ANSE1
 
 typedef struct {
-    const uint16_t *notes;    //Array of note periods (us)
-    const uint16_t *durations; //Array of note durations (ms)
-    uint8_t length;           //Number of notes
+    const unsigned short *notes;    // Array of note frequencies (Hz)
+    const unsigned short *durations; // Array of note durations (ms)
+    unsigned char length;           // Number of notes
 } Melody;
 
-//Control Functions
+// Control Functions
 void Buzzer_Init(void);
-void Buzzer_StartTone(uint16_t frequency, uint16_t duration_ms);
+void Buzzer_StartTone(unsigned short freq, unsigned short duration_ms);
 void Buzzer_StartMelody(const Melody *mel);
 void Buzzer_Stop(void);
+void Buzzer_Play(unsigned char tone_index); // 0=Alarm, 1=Beep
 
-//Must be called from interrupts
-void Buzzer_ISR_FrequencyTick(void);
-void Buzzer_ISR_MelodyTick(void);
+// New function to check status
+unsigned char Buzzer_IsPlaying(void);
+
+// Must be called from interrupts
+void Buzzer_ISR_FrequencyTick(void); // Call in Timer 2
+void Buzzer_ISR_MelodyTick(void);    // Call in Timer 1
 
 #endif

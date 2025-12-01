@@ -8,7 +8,7 @@ void LM35_Init(void) {
     ANSELEbits.ANSE0 = 0; // RE0 Digital
 
     
-    ADCON0bits.CHS = 6;
+    ADCON0bits.CHS = 7;
     ADCON1bits.PVCFG = 0;
     ADCON1bits.NVCFG = 0;
     ADCON2bits.ACQT = 4;

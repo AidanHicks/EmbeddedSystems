@@ -953,63 +953,6 @@ static void dtoa(FILE *fp, vfpf_sint_t d)
 
     return (void) pad(fp, &dbuf[i], w);
 }
-# 942 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
-static void stoa(FILE *fp, char *s)
-{
-    char *cp;
-    int l, p;
-
- int w;
-
-
-
-    cp = s;
-    if (!cp) {
-        cp = "(null)";
-    }
-
-
- for (l = 0; cp[l] != '\0'; l++) {
-  continue;
- }
-
-
-
-
-
-    p = l;
-
-
-
-    w = width;
-    if (!(flags & (1 << 0))) {
-        while (l < w) {
-            fputc(' ', fp);
-            ++l;
-        }
-    }
-
-
-
-    while (p--) {
-        fputc(*cp, fp);
-        ++cp;
-    }
-
-
-
-    if (flags & (1 << 0)) {
-        while (l < w) {
-            fputc(' ', fp);
-            ++l;
-        }
-    }
-
-
-
-
-
-}
 # 1157 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
 static int
 read_prec_or_width (const char **fmt, va_list *ap) {
@@ -1088,21 +1031,6 @@ vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
    *fmt = cp+1;
 # 1432 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
    return (void) dtoa(fp, convarg.sint);
-
-  }
-# 1656 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
-  done = 0;
-  if ((*fmt)[0] == 's') {
-   ++*fmt;
-   done = 1;
-  }
-  else if ((*fmt)[0] == 'l' && (*fmt)[1] == 'l' && (*fmt)[2] == 's') {
-   *fmt += 3;
-   done = 1;
-  }
-  if (done) {
-# 1682 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"
-   return (void) stoa(fp, (*(char * *)__va_arg(*(char * **)ap, (char *)0)));
 
   }
 # 1806 "C:\\Program Files\\Microchip\\xc8\\v3.00\\pic\\sources\\c99\\common\\doprnt.c"

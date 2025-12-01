@@ -6,6 +6,7 @@
 #include "rtc.h"
 #include "eeprom_cfg.h"
 #include "buttons.h"
+#include "buzzer.h"
 #include <stdio.h>
 
 #define HEATER_LED LATEbits.LATE0
@@ -18,7 +19,6 @@ unsigned int current_temp_raw;
 unsigned int current_temp_c;
 unsigned char heater_state = 0;
 unsigned char alarm_active = 0;
-unsigned long last_tick = 0;
 
 // Menu States
 typedef enum {
@@ -36,9 +36,23 @@ MenuState current_state = VIEW_MAIN;
 MenuState last_drawn_state = 255; 
 
 void __interrupt() ISR(void) {
+    // --- Timer 0 (System Ticks / Seven Seg) ---
     if(INTCONbits.TMR0IF) {
+        INTCONbits.TMR0IF = 0; 
         SevenSeg_ISR_Handler();
-        system_ticks++; // tick every 2ms
+        system_ticks++; 
+    }
+    
+    // --- Timer 1 (Buzzer Duration ~1ms) ---
+    if(PIR1bits.TMR1IF) {
+        PIR1bits.TMR1IF = 0;
+        Buzzer_ISR_MelodyTick();
+    }
+
+    // --- Timer 2 (Buzzer Frequency) ---
+    if(PIR1bits.TMR2IF) {
+        PIR1bits.TMR2IF = 0;
+        Buzzer_ISR_FrequencyTick();
     }
 }
 
@@ -65,26 +79,36 @@ void Check_Heating_Logic() {
 }
 
 void Handle_Alarm() {
+    static unsigned char alarm_triggered_this_minute = 0;
+    
     if(!settings.alarm_enabled) return;
     
-    if(current_time.hour == settings.alarm_hour && 
-       current_time.minute == settings.alarm_min && 
-       current_time.second == 0) {
-           alarm_active = 1; 
+    // Check start condition
+    if (current_time.second < 2) {
+        // Trigger alarm at exact second 00 if it matches setting
+        if (current_time.hour == settings.alarm_hour && 
+            current_time.minute == settings.alarm_min) {
+            
+            // Only trigger if we haven't already done so this minute
+            if (!alarm_triggered_this_minute && !alarm_active) {
+                alarm_active = 1;
+                alarm_triggered_this_minute = 1; // Latch to prevent re-triggering immediately after cancel
+            }
+        }
+    } else {
+        // Reset the latch once we leave the 0th second
+        alarm_triggered_this_minute = 0; 
     }
     
+    // Loop logic: If active, ensure buzzer keeps playing
     if(alarm_active) {
-        if(system_ticks % 200 < 100) { 
-            // Buzzer_Play(settings.alarm_tone); 
+        if(!Buzzer_IsPlaying()) {
+             Buzzer_Play(settings.alarm_tone);
         }
-        
-        // Auto silence after 5 seconds or via button
-        if(current_time.second > 5) alarm_active = 0; 
     }
 }
 
 void Update_Display() {
-    // FIX: Detect menu change and clear screen ONCE
     if (current_state != last_drawn_state) {
         LCD_Clear();
         last_drawn_state = current_state;
@@ -97,9 +121,7 @@ void Update_Display() {
             sprintf(buffer, "%02d:%02d %02d/%02d/%d", current_time.hour, current_time.minute, current_date.day, current_date.month, current_date.year);
             LCD_Set_Cursor(1,0); LCD_String(buffer);
             
-            sprintf(buffer, "T:%02d H:%s A:%s ", current_temp_c, 
-                    heater_state ? "ON " : "OFF", 
-                    settings.alarm_enabled ? "ON" : "--");
+            sprintf(buffer, "ALARM: %02d:%02d", settings.alarm_hour, settings.alarm_min);
             LCD_Set_Cursor(2,0); LCD_String(buffer);
             break;
             
@@ -127,6 +149,25 @@ void Update_Display() {
             LCD_Set_Cursor(2,0); LCD_String(buffer);
             break;
             
+        case MENU_SET_ALARM:
+            LCD_Set_Cursor(1,0); LCD_String("Set Alarm Time: ");
+            sprintf(buffer, "%02d:%02d           ", settings.alarm_hour, settings.alarm_min);
+            LCD_Set_Cursor(2,0); LCD_String(buffer);
+            break;
+
+        case MENU_SET_TONE:
+            LCD_Set_Cursor(1,0); LCD_String("Set Alarm Tone: ");
+            if(!settings.alarm_enabled) {
+                LCD_Set_Cursor(2,0); LCD_String("OFF             ");
+            } else {
+                if(settings.alarm_tone == 0) {
+                     LCD_Set_Cursor(2,0); LCD_String("SIREN           ");
+                } else {
+                     LCD_Set_Cursor(2,0); LCD_String("BEEP            ");
+                }
+            }
+            break;
+            
         case MENU_SAVE:
             LCD_Set_Cursor(1,0); LCD_String("Save Settings?  ");
             LCD_Set_Cursor(2,0); LCD_String("UP=Yes DOWN=No  ");
@@ -141,6 +182,7 @@ void Handle_Input() {
     // Silence alarm if any button is pressed
     if(alarm_active) {
         alarm_active = 0;
+        Buzzer_Stop(); // Stop sound immediately
         return;
     }
 
@@ -177,8 +219,35 @@ void Handle_Input() {
             if(btn == 1) settings.heat_end_min += 15;
              if(settings.heat_end_min >= 60) { settings.heat_end_min = 0; }
             if(settings.heat_end_hour >= 24) settings.heat_end_hour = 0;
-            if(btn == 3) current_state = MENU_SAVE;
+            if(btn == 3) current_state = MENU_SET_ALARM; 
             if(btn == 4) current_state = MENU_SET_HEAT_START;
+            break;
+            
+        case MENU_SET_ALARM:
+            if(btn == 2) settings.alarm_hour++;
+            if(btn == 1) settings.alarm_min += 15;
+            if(settings.alarm_min >= 60) { settings.alarm_min = 0; }
+            if(settings.alarm_hour >= 24) settings.alarm_hour = 0;
+            if(btn == 3) current_state = MENU_SET_TONE;
+            if(btn == 4) current_state = MENU_SET_HEAT_END;
+            break;
+
+        case MENU_SET_TONE:
+            // Cycle: OFF -> SIREN -> BEEP -> OFF
+            if(btn == 1 || btn == 2) { 
+                if(!settings.alarm_enabled) {
+                    settings.alarm_enabled = 1;
+                    settings.alarm_tone = 0;
+                } else {
+                    if(settings.alarm_tone == 0) {
+                        settings.alarm_tone = 1;
+                    } else {
+                        settings.alarm_enabled = 0;
+                    }
+                }
+            }
+            if(btn == 3) current_state = MENU_SAVE;
+            if(btn == 4) current_state = MENU_SET_ALARM;
             break;
             
         case MENU_SAVE:
@@ -188,10 +257,10 @@ void Handle_Input() {
                 LCD_Set_Cursor(1,0); LCD_String("Saved!");
                 __delay_ms(1000);
                 current_state = VIEW_MAIN;
-                // Force clear on return to main
                 last_drawn_state = 255; 
             }
             if(btn == 2) current_state = VIEW_MAIN; // No
+            if(btn == 4) current_state = MENU_SET_TONE; 
             break;
     }
 }
@@ -211,25 +280,26 @@ void main(void) {
     I2C1_Init_Master(100000ul);
     RTC_Init();
     Controls_Init();
+    Buzzer_Init(); 
     EEPROM_Load_Settings(&settings);
     
     // Enable Interrupts
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
     
-    //// one time thing
-    //RTC_Set_Time(15,39,00);
-    //RTC_Set_Date(1,12,25);
+    RTC_Set_Time(18,44,55);
+    // RTC_Set_Date(1,12,25);
     
     RTC_Get_Time(&current_time);
     RTC_Get_Date(&current_date);
+    
     while(1) {
         if(system_ticks % 100 == 0) {  // ~200ms
             current_temp_c = LM35_Read_Temp();
             SevenSeg_Update_Value(current_temp_c);
         }
         
-        if(system_ticks % 500 == 0) { // ~1s
+        if(system_ticks % 100 == 0) { // ~200ms
             RTC_Get_Time(&current_time);
         }
         
@@ -237,7 +307,6 @@ void main(void) {
             RTC_Get_Date(&current_date);
         }
 
-        
         Check_Heating_Logic();
         Handle_Alarm();
         Handle_Input();
@@ -245,6 +314,5 @@ void main(void) {
         if(system_ticks % 50 == 0) { // ~100ms
             Update_Display();
         }
-        
     }
 }
