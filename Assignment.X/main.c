@@ -2,18 +2,18 @@
 #include "lm35.h"
 #include "sevenseg.h"
 #include "lcd.h"
-#include "i2c.h"
 #include "rtc.h"
 #include "eeprom_cfg.h"
+#include "buzzer.h"
 #include "buttons.h"
 #include <stdio.h>
 
+// Pin Definitions for Heating
 #define HEATER_LED LATEbits.LATE0
 
-// Globals
+// System Globals
 SystemSettings settings;
-Time_t current_time;
-Date_t current_date;
+Time currentTime;
 unsigned int current_temp_raw;
 unsigned int current_temp_c;
 unsigned char heater_state = 0;
@@ -33,30 +33,37 @@ typedef enum {
 } MenuState;
 
 MenuState current_state = VIEW_MAIN;
+// FIX: Track the last state to detect changes
 MenuState last_drawn_state = 255; 
 
+// Global Tick Counter (incremented in ISR)
+volatile unsigned long system_ticks = 0;
+
 void __interrupt() ISR(void) {
+    // Timer0 for 7-Seg and System Ticks
     if(INTCONbits.TMR0IF) {
         SevenSeg_ISR_Handler();
-        system_ticks++; // tick every 2ms
+        system_ticks++; // increments every ~2ms
     }
 }
 
 void Check_Heating_Logic() {
-    unsigned int now_mins = current_time.hour * 60 + current_time.minute;
+    // Convert times to minutes for easier comparison
+    unsigned int now_mins = currentTime.hour * 60 + currentTime.min;
     unsigned int start_mins = settings.heat_start_hour * 60 + settings.heat_start_min;
     unsigned int end_mins = settings.heat_end_hour * 60 + settings.heat_end_min;
     
-    unsigned char in_window = 1;
+    unsigned char in_window = 0;
     if(start_mins < end_mins) {
         if(now_mins >= start_mins && now_mins < end_mins) in_window = 1;
-    } else { // goes over the night
+    } else {
+        // Window crosses midnight
         if(now_mins >= start_mins || now_mins < end_mins) in_window = 1;
     }
 
     if(in_window) {
-        if(current_temp_c/100 < settings.temp_low) heater_state = 1;
-        else if(current_temp_c/100 >= settings.temp_high) heater_state = 0;
+        if(current_temp_c < settings.temp_low) heater_state = 1;
+        else if(current_temp_c >= settings.temp_high) heater_state = 0;
     } else {
         heater_state = 0;
     }
@@ -65,21 +72,34 @@ void Check_Heating_Logic() {
 }
 
 void Handle_Alarm() {
+    static uint16_t alarm_start_tick = 0;
+    
+    //Exit early if alarm is disabled
     if(!settings.alarm_enabled) return;
     
-    if(current_time.hour == settings.alarm_hour && 
-       current_time.minute == settings.alarm_min && 
-       current_time.second == 0) {
-           alarm_active = 1; 
+    //Trigger alarm at programmed time
+    if(!alarm_active && currentTime.hour == settings.alarm_hour && 
+       currentTime.min == settings.alarm_min && 
+       currentTime.sec == 0) {
+           alarm_active = 1;
+           alarm_start_tick = system_ticks;
+           
+           if (settings.alarm_tone == 0) {
+               //Tone A: 1.5 sec duration, 1.5kHz frequency
+               Buzzer_StartTone(1000, 1500);
+           } else {
+               //Tone B: simple melody, 3 notes
+               static const uint16_t melodyNotes[] = { 1000, 1200, 1000 };
+               static const uint16_t melodyDurations[] = { 500, 500, 500 };
+               static const Melody toneB = {melodyNotes, melodyDurations, 3};
+               Buzzer_StartMelody(&toneB);
+           }
     }
     
-    if(alarm_active) {
-        if(system_ticks % 200 < 100) { 
-            // Buzzer_Play(settings.alarm_tone); 
-        }
-        
-        // Auto silence after 5 seconds or via button
-        if(current_time.second > 5) alarm_active = 0; 
+    // Play alarm for 2 seconds (approx 1000 ticks at 2ms)
+    if(alarm_active && (system_ticks - alarm_start_tick >= 1000)){
+        Buzzer_Stop();
+        alarm_active = 0;
     }
 }
 
@@ -94,7 +114,8 @@ void Update_Display() {
     
     switch(current_state) {
         case VIEW_MAIN:
-            sprintf(buffer, "%02d:%02d %02d/%02d/%d", current_time.hour, current_time.minute, current_date.day, current_date.month, current_date.year);
+            // Format with fixed width or padding
+            sprintf(buffer, "Time: %02d:%02d:%02d  ", currentTime.hour, currentTime.min, currentTime.sec);
             LCD_Set_Cursor(1,0); LCD_String(buffer);
             
             sprintf(buffer, "T:%02d H:%s A:%s ", current_temp_c, 
@@ -105,6 +126,7 @@ void Update_Display() {
             
         case MENU_SET_TEMP_LOW:
             LCD_Set_Cursor(1,0); LCD_String("Set Temp LOW:   ");
+            // Added spaces padding to clear previous digits if number shrinks
             sprintf(buffer, "%d C        ", settings.temp_low); 
             LCD_Set_Cursor(2,0); LCD_String(buffer);
             break;
@@ -127,6 +149,18 @@ void Update_Display() {
             LCD_Set_Cursor(2,0); LCD_String(buffer);
             break;
             
+        case MENU_SET_ALARM:
+            LCD_Set_Cursor(1,0); LCD_String("Alarm: ON/OFF   ");
+            LCD_Set_Cursor(2,0);
+            LCD_String(settings.alarm_enabled ? "ON " : "OFF");
+            break;
+            
+        case MENU_SET_TONE:
+            LCD_Set_Cursor(1,0); LCD_String("Select Tone:    ");
+            LCD_Set_Cursor(2,0);
+            LCD_String(settings.alarm_tone == 0 ? "Tone A" : "Tone B");
+            break;
+            
         case MENU_SAVE:
             LCD_Set_Cursor(1,0); LCD_String("Save Settings?  ");
             LCD_Set_Cursor(2,0); LCD_String("UP=Yes DOWN=No  ");
@@ -138,8 +172,9 @@ void Handle_Input() {
     unsigned char btn = Button_Read();
     if(btn == 0) return;
     
-    // Silence alarm if any button is pressed
+    // Silence alarm if active
     if(alarm_active) {
+        Buzzer_Stop();
         alarm_active = 0;
         return;
     }
@@ -147,7 +182,7 @@ void Handle_Input() {
     // State Machine Navigation
     switch(current_state) {
         case VIEW_MAIN:
-            if(btn == 3) current_state = MENU_SET_TEMP_LOW;
+            if(btn == 3) current_state = MENU_SET_TEMP_LOW; // Enter
             break;
             
         case MENU_SET_TEMP_LOW:
@@ -164,8 +199,8 @@ void Handle_Input() {
             break;
             
         case MENU_SET_HEAT_START:
-            if(btn == 2) settings.heat_start_hour++;
-            if(btn == 1) settings.heat_start_min += 15;
+            if(btn == 1) settings.heat_start_hour++;
+            if(btn == 2) settings.heat_start_min += 15;
             if(settings.heat_start_min >= 60) { settings.heat_start_min = 0; }
             if(settings.heat_start_hour >= 24) settings.heat_start_hour = 0;
             if(btn == 3) current_state = MENU_SET_HEAT_END;
@@ -173,13 +208,28 @@ void Handle_Input() {
             break;
             
         case MENU_SET_HEAT_END:
-            if(btn == 2) settings.heat_end_hour++;
-            if(btn == 1) settings.heat_end_min += 15;
+            if(btn == 1) settings.heat_end_hour++;
+            if(btn == 2) settings.heat_end_min += 15;
              if(settings.heat_end_min >= 60) { settings.heat_end_min = 0; }
             if(settings.heat_end_hour >= 24) settings.heat_end_hour = 0;
-            if(btn == 3) current_state = MENU_SAVE;
+            if(btn == 3) current_state = MENU_SET_ALARM;
             if(btn == 4) current_state = MENU_SET_HEAT_START;
             break;
+            
+        case MENU_SET_ALARM:
+            if(btn == 1 || btn == 2) {
+                settings.alarm_enabled = !settings.alarm_enabled; //Toggle ON/OFF
+            }
+            if(btn == 3) current_state = MENU_SET_TONE;
+            if(btn == 4) current_state = MENU_SET_HEAT_END;
+            break;
+            
+        case MENU_SET_TONE:
+            if (btn == 1 || btn == 2) {
+                settings.alarm_tone = !settings.alarm_tone;
+            }
+            if(btn == 3) current_state = MENU_SAVE;
+            if(btn == 4) current_state = MENU_SET_ALARM;
             
         case MENU_SAVE:
             if(btn == 1) { // Yes
@@ -197,54 +247,48 @@ void Handle_Input() {
 }
 
 void main(void) {
+    // FIX 1: Set Internal Oscillator to 8MHz explicitly
     OSCCON = 0x66; 
-    OSCCONbits.SCS = 0b00;
 
-    // for heater led
-    ANSELE = 0;
-    TRISEbits.TRISE0 = 0;
+    // Initialization
+    ANSELE = 0; // Default Digital
+    TRISEbits.TRISE0 = 0; // Heater LED Out
     
-    // init everything
     LM35_Init();
     SevenSeg_Init();
     LCD_Init();
-    I2C1_Init_Master(100000ul);
     RTC_Init();
     Controls_Init();
+    Buzzer_Init();
     EEPROM_Load_Settings(&settings);
     
     // Enable Interrupts
     INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
-    
-    //// one time thing
-    //RTC_Set_Time(15,39,00);
-    //RTC_Set_Date(1,12,25);
-    
-    RTC_Get_Time(&current_time);
-    RTC_Get_Date(&current_date);
+
     while(1) {
-        if(system_ticks % 100 == 0) {  // ~200ms
+        // 1. Read Hardware
+        if(system_ticks % 100 == 0) {
             current_temp_c = LM35_Read_Temp();
             SevenSeg_Update_Value(current_temp_c);
         }
         
-        if(system_ticks % 500 == 0) { // ~1s
-            RTC_Get_Time(&current_time);
+        if(system_ticks % 500 == 0) {
+            RTC_Get_Time(&currentTime);
         }
         
-        if (system_ticks % 300000 == 0) { // ~10 mins
-            RTC_Get_Date(&current_date);
-        }
-
-        
+        // 2. Logic
         Check_Heating_Logic();
         Handle_Alarm();
+        
+        // 3. User Interface
         Handle_Input();
         
-        if(system_ticks % 50 == 0) { // ~100ms
+        // Update LCD every ~100ms
+        if(system_ticks % 50 == 0) {
             Update_Display();
         }
         
+        __delay_ms(5);
     }
 }
