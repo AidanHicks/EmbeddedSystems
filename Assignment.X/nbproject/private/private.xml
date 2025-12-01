@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/mcc_generated_files/system/pins.h</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/eeprom.c</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/config_bits.h</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/lm35.c</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/rtc.c</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/buttons.h</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/buttons.c</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/rtc.h</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/main.c</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/lcd.c</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/mcc_generated_files/system/system.h</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/eeprom_cfg.h</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/mcc_generated_files/system/clock.h</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/mcc_generated_files/system/interrupt.h</file>
-            <file>file:/C:/Users/767905/MPLABXProjects/Assignment.X/lcd.h</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

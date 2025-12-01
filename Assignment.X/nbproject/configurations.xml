@@ -21,6 +21,7 @@
       <itemPath>lm35.h</itemPath>
       <itemPath>sevenseg.h</itemPath>
       <itemPath>lcd.h</itemPath>
+      <itemPath>i2c.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -55,6 +56,7 @@
       <itemPath>lm35.c</itemPath>
       <itemPath>sevenseg.c</itemPath>
       <itemPath>lcd.c</itemPath>
+      <itemPath>i2c.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -78,23 +80,6 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibProjectItem>
-              <makeArtifact PL="../EmbeddedLibrary.X"
-                            CT="3"
-                            CN="default"
-                            AC="true"
-                            BL="true"
-                            WD="../EmbeddedLibrary.X"
-                            BC="${MAKE}  -f Makefile CONF=default"
-                            DBC="${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN"
-                            CC="rm -rf &quot;build/default&quot; &quot;dist/default&quot;"
-                            OP="dist/default/production/EmbeddedLibrary.X.a"
-                            DOP="dist/default/debug/EmbeddedLibrary.X.a"
-                            FL="dist/default/production/EmbeddedLibrary.X.a"
-                            PD="dist/default/production/EmbeddedLibrary.X.a"
-                            DD="dist/default/debug/EmbeddedLibrary.X.a">
-              </makeArtifact>
-            </linkerLibProjectItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>

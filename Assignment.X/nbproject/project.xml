@@ -7,9 +7,7 @@
             <creation-uuid>8af67cf5-aa7f-4f07-b845-8cee6ed1e71c</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
-            <make-dep-projects>
-                <make-dep-project>../EmbeddedLibrary.X</make-dep-project>
-            </make-dep-projects>
+            <make-dep-projects/>
             <sourceRootList/>
             <confList>
                 <confElem>

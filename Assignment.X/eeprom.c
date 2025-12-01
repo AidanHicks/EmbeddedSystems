@@ -1,25 +1,53 @@
 
 #include "eeprom_cfg.h"
+#include "i2c.h"
 
-void Write_Byte(unsigned char addr, unsigned char data) {
-    EEADR = addr;
-    EEDATA = data;
-    EECON1bits.EEPGD = 0;
-    EECON1bits.CFGS = 0;
-    EECON1bits.WREN = 1;
-    EECON2 = 0x55;
-    EECON2 = 0xAA;
-    EECON1bits.WR = 1;
-    while(EECON1bits.WR); // Wait
-    EECON1bits.WREN = 0;
+#define M24C08_E2 0
+#define EEPROM_WRITE_TIMEOUT_MS 15u
+
+static unsigned char m24c08_devsel_write(unsigned int addr10){
+    unsigned char a9a8 = (addr10 >> 8) & 0x03;
+    return (unsigned char)((0b1010<<4) | (M24C08_E2<<3) | (a9a8<<1));
+}
+static unsigned char m24c08_devsel_read(unsigned int addr10){
+    unsigned char a9a8 = (addr10 >> 8) & 0x03;
+    return (unsigned char)((0b1010<<4) | (M24C08_E2<<3) | (a9a8<<1) | 1);
 }
 
-unsigned char Read_Byte(unsigned char addr) {
-    EEADR = addr;
-    EECON1bits.EEPGD = 0;
-    EECON1bits.CFGS = 0;
-    EECON1bits.RD = 1;
-    return EEDATA;
+void Write_Byte(unsigned int addr10, unsigned char data){
+    unsigned char devW = m24c08_devsel_write(addr10);
+    unsigned char a7_0 = (unsigned char)(addr10 & 0xFF);
+    unsigned int tries = 0;
+
+    I2C1_Start();
+    I2C1_Write(devW);
+    I2C1_Write(a7_0);
+    I2C1_Write(data);
+    I2C1_Stop();
+
+    while(1){
+        I2C1_Start();
+        if(I2C1_Write(devW)){ I2C1_Stop(); break; }
+        I2C1_Stop();
+        __delay_ms(1);
+        if(++tries >= EEPROM_WRITE_TIMEOUT_MS) break;
+    }
+}
+
+unsigned char Read_Byte(unsigned int addr10){
+    unsigned char devW = m24c08_devsel_write(addr10);
+    unsigned char devR = m24c08_devsel_read(addr10);
+    unsigned char a7_0 = (unsigned char)(addr10 & 0xFF);
+    unsigned char v;
+
+    I2C1_Start();
+    I2C1_Write(devW);
+    I2C1_Write(a7_0);
+    I2C1_Restart();
+    I2C1_Write(devR);
+    v = I2C1_Read_NACK();
+    I2C1_Stop();
+    return v;
 }
 
 void EEPROM_Load_Settings(SystemSettings *s) {

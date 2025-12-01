@@ -59,22 +59,3 @@ unsigned char Button_Read(void) {
 
     return result;
 }
-
-void Buzzer_Play(unsigned char tone_type) {
-    unsigned int i;
-    if(tone_type == 0) { // Tone A: High Pitch
-        for(i=0; i<100; i++) { // Reduced length for faster UI response
-            BUZZER_PIN = 1; __delay_us(200);
-            BUZZER_PIN = 0; __delay_us(200);
-        }
-    } else { // Tone B: Warble
-        for(i=0; i<50; i++) {
-            BUZZER_PIN = 1; __delay_us(500);
-            BUZZER_PIN = 0; __delay_us(500);
-        }
-         for(i=0; i<50; i++) {
-            BUZZER_PIN = 1; __delay_us(300);
-            BUZZER_PIN = 0; __delay_us(300);
-        }
-    }
-}

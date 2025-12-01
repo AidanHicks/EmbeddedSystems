@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 18F45K22 ]
 [d frameptr 4065 ]
-"34 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
-[e E6382 . `uc
+"35 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\main.c
+[e E6404 . `uc
 VIEW_MAIN 0
 MENU_SET_TEMP_LOW 1
 MENU_SET_TEMP_HIGH 2
@@ -14,14 +14,14 @@ MENU_SET_ALARM 5
 MENU_SET_TONE 6
 MENU_SAVE 7
 ]
-"11 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
+"11 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\buttons.c
 [v _Controls_Init Controls_Init `(v  1 e 1 0 ]
 "22
 [v _Get_Button Get_Button `(uc  1 e 1 0 ]
 "40
 [v _Button_Read Button_Read `(uc  1 e 1 0 ]
-"63
-[v _Buzzer_Play Buzzer_Play `(v  1 e 1 0 ]
+"7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "1 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
 "7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awdiv.c
@@ -78,15 +78,35 @@ MENU_SAVE 7
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"4 C:\Users\767905\MPLABXProjects\Assignment.X\eeprom.c
-[v _Write_Byte Write_Byte `(v  1 e 1 0 ]
+"8 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\eeprom.c
+[v _m24c08_devsel_write m24c08_devsel_write `(uc  1 s 1 m24c08_devsel_write ]
+"12
+[v _m24c08_devsel_read m24c08_devsel_read `(uc  1 s 1 m24c08_devsel_read ]
 "17
+[v _Write_Byte Write_Byte `(v  1 e 1 0 ]
+"37
 [v _Read_Byte Read_Byte `(uc  1 e 1 0 ]
-"25
+"53
 [v _EEPROM_Load_Settings EEPROM_Load_Settings `(v  1 e 1 0 ]
-"54
+"82
 [v _EEPROM_Save_Settings EEPROM_Save_Settings `(v  1 e 1 0 ]
-"4 C:\Users\767905\MPLABXProjects\Assignment.X\lcd.c
+"22 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\i2c.c
+[v _I2C1_WaitIdle I2C1_WaitIdle `(v  1 s 1 I2C1_WaitIdle ]
+"26
+[v _I2C1_Init_Master I2C1_Init_Master `(v  1 e 1 0 ]
+"39
+[v _I2C1_Start I2C1_Start `(v  1 e 1 0 ]
+"46
+[v _I2C1_Restart I2C1_Restart `(v  1 e 1 0 ]
+"54
+[v _I2C1_Stop I2C1_Stop `(v  1 e 1 0 ]
+"61
+[v _I2C1_Write I2C1_Write `(uc  1 e 1 0 ]
+"71
+[v _I2C1_Read_ACK I2C1_Read_ACK `(uc  1 e 1 0 ]
+"83
+[v _I2C1_Read_NACK I2C1_Read_NACK `(uc  1 e 1 0 ]
+"4 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\lcd.c
 [v _LCD_Nibble LCD_Nibble `(v  1 e 1 0 ]
 "15
 [v _LCD_Cmd LCD_Cmd `(v  1 e 1 0 ]
@@ -100,25 +120,25 @@ MENU_SAVE 7
 [v _LCD_Set_Cursor LCD_Set_Cursor `(v  1 e 1 0 ]
 "56
 [v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
-"5 C:\Users\767905\MPLABXProjects\Assignment.X\lm35.c
+"5 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\lm35.c
 [v _LM35_Init LM35_Init `(v  1 e 1 0 ]
 "19
 [v _LM35_Read_Temp LM35_Read_Temp `(ui  1 e 2 0 ]
-"40 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
+"38 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\main.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"48
+"45
 [v _Check_Heating_Logic Check_Heating_Logic `(v  1 e 1 0 ]
-"72
+"67
 [v _Handle_Alarm Handle_Alarm `(v  1 e 1 0 ]
-"93
+"86
 [v _Update_Display Update_Display `(v  1 e 1 0 ]
-"144
+"137
 [v _Handle_Input Handle_Input `(v  1 e 1 0 ]
-"206
+"199
 [v _main main `(v  1 e 1 0 ]
-"39 C:\Users\767905\MPLABXProjects\Assignment.X\mcc_generated_files/system/src/clock.c
+"39 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
-"42 C:\Users\767905\MPLABXProjects\Assignment.X\mcc_generated_files/system/src/interrupt.c
+"42 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "83
 [v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
@@ -138,37 +158,33 @@ MENU_SAVE 7
 [v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
 "148
 [v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
-"38 C:\Users\767905\MPLABXProjects\Assignment.X\mcc_generated_files/system/src/pins.c
+"38 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"12 C:\Users\767905\MPLABXProjects\Assignment.X\rtc.c
-[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
-"18
-[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
-"23
-[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-"29
-[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
-"39
-[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
-"52
-[v _BCD2Dec BCD2Dec `(uc  1 e 1 0 ]
-"53
-[v _Dec2BCD Dec2BCD `(uc  1 e 1 0 ]
-"55
+"25 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\rtc.c
+[v _dec_to_bcd dec_to_bcd `(uc  1 s 1 dec_to_bcd ]
+"26
+[v _bcd_to_dec bcd_to_dec `(uc  1 s 1 bcd_to_dec ]
+"28
+[v _rtc16_write_reg rtc16_write_reg `(v  1 e 1 0 ]
+"36
+[v _rtc16_read_regs rtc16_read_regs `(v  1 e 1 0 ]
+"47
+[v _rtc16_default_cfg rtc16_default_cfg `(v  1 e 1 0 ]
+"54
 [v _RTC_Init RTC_Init `(v  1 e 1 0 ]
-"57
+"67
 [v _RTC_Get_Time RTC_Get_Time `(v  1 e 1 0 ]
-"71
-[v _RTC_Set_Time RTC_Set_Time `(v  1 e 1 0 ]
-"10 C:\Users\767905\MPLABXProjects\Assignment.X\sevenseg.c
+"75
+[v _RTC_Get_Date RTC_Get_Date `(v  1 e 1 0 ]
+"10 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\sevenseg.c
 [v _SevenSeg_Init SevenSeg_Init `(v  1 e 1 0 ]
 "35
 [v _SevenSeg_Update_Value SevenSeg_Update_Value `(v  1 e 1 0 ]
 "44
 [v _SevenSeg_ISR_Handler SevenSeg_ISR_Handler `(v  1 e 1 0 ]
-"9 C:\Users\767905\MPLABXProjects\Assignment.X/config_bits.h
+"9 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X/config_bits.h
 [v _system_ticks system_ticks `VEul  1 e 4 0 ]
-"4 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
+"4 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\buttons.c
 [v _last_btn_up last_btn_up `uc  1 e 1 0 ]
 "5
 [v _last_btn_down last_btn_down `uc  1 e 1 0 ]
@@ -184,33 +200,22 @@ MENU_SAVE 7
 [v _ANSELB ANSELB `VEuc  1 e 1 @3897 ]
 "147
 [v _ANSELC ANSELC `VEuc  1 e 1 @3898 ]
-[s S985 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 ANSC2 1 0 :1:2 
-`uc 1 ANSC3 1 0 :1:3 
-`uc 1 ANSC4 1 0 :1:4 
-`uc 1 ANSC5 1 0 :1:5 
-`uc 1 ANSC6 1 0 :1:6 
-`uc 1 ANSC7 1 0 :1:7 
-]
-"163
-[u S993 . 1 `S985 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES993  1 e 1 @3898 ]
 "198
 [v _ANSELD ANSELD `VEuc  1 e 1 @3899 ]
 "260
 [v _ANSELE ANSELE `VEuc  1 e 1 @3900 ]
-[s S1137 . 1 `uc 1 ANSE0 1 0 :1:0 
+[s S1058 . 1 `uc 1 ANSE0 1 0 :1:0 
 `uc 1 ANSE1 1 0 :1:1 
 `uc 1 ANSE2 1 0 :1:2 
 ]
 "272
-[u S1141 . 1 `S1137 1 . 1 0 ]
-[v _ANSELEbits ANSELEbits `VES1141  1 e 1 @3900 ]
+[u S1062 . 1 `S1058 1 . 1 0 ]
+[v _ANSELEbits ANSELEbits `VES1062  1 e 1 @3900 ]
 "2719
 [v _WPUB WPUB `VEuc  1 e 1 @3937 ]
 "2781
 [v _IOCB IOCB `VEuc  1 e 1 @3938 ]
-[s S639 . 1 `uc 1 RC0 1 0 :1:0 
+[s S683 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -220,7 +225,7 @@ MENU_SAVE 7
 `uc 1 RC7 1 0 :1:7 
 ]
 "6907
-[s S720 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S764 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 T5CKI 1 0 :1:2 
 `uc 1 SCK 1 0 :1:3 
@@ -229,7 +234,7 @@ MENU_SAVE 7
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S729 . 1 `uc 1 P2B 1 0 :1:0 
+[s S773 . 1 `uc 1 P2B 1 0 :1:0 
 `uc 1 P2A 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 SCL 1 0 :1:3 
@@ -238,7 +243,7 @@ MENU_SAVE 7
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S738 . 1 `uc 1 T1CKI 1 0 :1:0 
+[s S782 . 1 `uc 1 T1CKI 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 SCK1 1 0 :1:3 
@@ -247,7 +252,7 @@ MENU_SAVE 7
 `uc 1 TX1 1 0 :1:6 
 `uc 1 RX1 1 0 :1:7 
 ]
-[s S747 . 1 `uc 1 T3CKI 1 0 :1:0 
+[s S791 . 1 `uc 1 T3CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 CTPLS 1 0 :1:2 
 `uc 1 SCL1 1 0 :1:3 
@@ -256,7 +261,7 @@ MENU_SAVE 7
 `uc 1 CK1 1 0 :1:6 
 `uc 1 DT1 1 0 :1:7 
 ]
-[s S756 . 1 `uc 1 T3G 1 0 :1:0 
+[s S800 . 1 `uc 1 T3G 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 AN14 1 0 :1:2 
 `uc 1 AN15 1 0 :1:3 
@@ -265,17 +270,17 @@ MENU_SAVE 7
 `uc 1 AN18 1 0 :1:6 
 `uc 1 AN19 1 0 :1:7 
 ]
-[s S765 . 1 `uc 1 . 1 0 :1:0 
+[s S809 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[u S769 . 1 `S639 1 . 1 0 `S720 1 . 1 0 `S729 1 . 1 0 `S738 1 . 1 0 `S747 1 . 1 0 `S756 1 . 1 0 `S765 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES769  1 e 1 @3970 ]
+[u S813 . 1 `S683 1 . 1 0 `S764 1 . 1 0 `S773 1 . 1 0 `S782 1 . 1 0 `S791 1 . 1 0 `S800 1 . 1 0 `S809 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES813  1 e 1 @3970 ]
 "7560
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 "7672
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
-[s S1379 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1300 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -285,7 +290,7 @@ MENU_SAVE 7
 `uc 1 LATB7 1 0 :1:7 
 ]
 "7699
-[s S1388 . 1 `uc 1 LB0 1 0 :1:0 
+[s S1309 . 1 `uc 1 LB0 1 0 :1:0 
 `uc 1 LB1 1 0 :1:1 
 `uc 1 LB2 1 0 :1:2 
 `uc 1 LB3 1 0 :1:3 
@@ -294,11 +299,11 @@ MENU_SAVE 7
 `uc 1 LB6 1 0 :1:6 
 `uc 1 LB7 1 0 :1:7 
 ]
-[u S1397 . 1 `S1379 1 . 1 0 `S1388 1 . 1 0 ]
-[v _LATBbits LATBbits `VES1397  1 e 1 @3978 ]
+[u S1318 . 1 `S1300 1 . 1 0 `S1309 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1318  1 e 1 @3978 ]
 "7784
 [v _LATC LATC `VEuc  1 e 1 @3979 ]
-[s S671 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S715 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -308,7 +313,7 @@ MENU_SAVE 7
 `uc 1 LATC7 1 0 :1:7 
 ]
 "7811
-[s S680 . 1 `uc 1 LC0 1 0 :1:0 
+[s S724 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -317,30 +322,30 @@ MENU_SAVE 7
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S689 . 1 `S671 1 . 1 0 `S680 1 . 1 0 ]
-[v _LATCbits LATCbits `VES689  1 e 1 @3979 ]
+[u S733 . 1 `S715 1 . 1 0 `S724 1 . 1 0 ]
+[v _LATCbits LATCbits `VES733  1 e 1 @3979 ]
 "7896
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "8008
 [v _LATE LATE `VEuc  1 e 1 @3981 ]
-[s S414 . 1 `uc 1 LATE0 1 0 :1:0 
+[s S418 . 1 `uc 1 LATE0 1 0 :1:0 
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 ]
 "8025
-[s S418 . 1 `uc 1 LE0 1 0 :1:0 
+[s S422 . 1 `uc 1 LE0 1 0 :1:0 
 `uc 1 LE1 1 0 :1:1 
 `uc 1 LE2 1 0 :1:2 
 ]
-[u S422 . 1 `S414 1 . 1 0 `S418 1 . 1 0 ]
-[v _LATEbits LATEbits `VES422  1 e 1 @3981 ]
+[u S426 . 1 `S418 1 . 1 0 `S422 1 . 1 0 ]
+[v _LATEbits LATEbits `VES426  1 e 1 @3981 ]
 "8060
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "8282
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "8504
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-[s S630 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S674 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -350,88 +355,67 @@ MENU_SAVE 7
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "8536
-[u S648 . 1 `S630 1 . 1 0 `S639 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES648  1 e 1 @3988 ]
+[u S692 . 1 `S674 1 . 1 0 `S683 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES692  1 e 1 @3988 ]
 "8726
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "8948
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S477 . 1 `uc 1 TRISE0 1 0 :1:0 
+[s S508 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 WPUE3 1 0 :1:7 
 ]
 "8972
-[s S483 . 1 `uc 1 RE0 1 0 :1:0 
+[s S514 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 ]
-[u S487 . 1 `S477 1 . 1 0 `S483 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES487  1 e 1 @3990 ]
+[u S518 . 1 `S508 1 . 1 0 `S514 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES518  1 e 1 @3990 ]
 "9064
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3995 ]
-[s S881 . 1 `uc 1 RD 1 0 :1:0 
-`uc 1 WR 1 0 :1:1 
-`uc 1 WREN 1 0 :1:2 
-`uc 1 WRERR 1 0 :1:3 
-`uc 1 FREE 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 CFGS 1 0 :1:6 
-`uc 1 EEPGD 1 0 :1:7 
-]
-"10190
-[s S890 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 EEFS 1 0 :1:6 
-]
-[u S893 . 1 `S881 1 . 1 0 `S890 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES893  1 e 1 @4006 ]
-"10235
-[v _EECON2 EECON2 `VEuc  1 e 1 @4007 ]
-"10255
-[v _EEDATA EEDATA `VEuc  1 e 1 @4008 ]
-"10275
-[v _EEADR EEADR `VEuc  1 e 1 @4009 ]
-[s S1249 . 1 `uc 1 ADCS 1 0 :3:0 
+[s S1170 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "13459
-[s S1254 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S1175 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
 `uc 1 ACQT1 1 0 :1:4 
 `uc 1 ACQT2 1 0 :1:5 
 ]
-[u S1261 . 1 `S1249 1 . 1 0 `S1254 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES1261  1 e 1 @4032 ]
-[s S1218 . 1 `uc 1 NVCFG 1 0 :2:0 
+[u S1182 . 1 `S1170 1 . 1 0 `S1175 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES1182  1 e 1 @4032 ]
+[s S1139 . 1 `uc 1 NVCFG 1 0 :2:0 
 `uc 1 PVCFG 1 0 :2:2 
 `uc 1 . 1 0 :3:4 
 `uc 1 TRIGSEL 1 0 :1:7 
 ]
 "13532
-[s S1223 . 1 `uc 1 NVCFG0 1 0 :1:0 
+[s S1144 . 1 `uc 1 NVCFG0 1 0 :1:0 
 `uc 1 NVCFG1 1 0 :1:1 
 `uc 1 PVCFG0 1 0 :1:2 
 `uc 1 PVCFG1 1 0 :1:3 
 ]
-[s S1228 . 1 `uc 1 . 1 0 :3:0 
+[s S1149 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CHSN3 1 0 :1:3 
 ]
-[u S1231 . 1 `S1218 1 . 1 0 `S1223 1 . 1 0 `S1228 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES1231  1 e 1 @4033 ]
-[s S1148 . 1 `uc 1 . 1 0 :1:0 
+[u S1152 . 1 `S1139 1 . 1 0 `S1144 1 . 1 0 `S1149 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES1152  1 e 1 @4033 ]
+[s S1069 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "13622
-[s S1151 . 1 `uc 1 ADON 1 0 :1:0 
+[s S1072 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S1155 . 1 `uc 1 . 1 0 :1:0 
+[s S1076 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -439,27 +423,37 @@ MENU_SAVE 7
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S1163 . 1 `uc 1 . 1 0 :1:0 
+[s S1084 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S1166 . 1 `uc 1 . 1 0 :1:0 
+[s S1087 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S1169 . 1 `uc 1 . 1 0 :1:0 
+[s S1090 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S1172 . 1 `uc 1 . 1 0 :1:0 
+[s S1093 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[s S1175 . 1 `uc 1 . 1 0 :1:0 
+[s S1096 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S1178 . 1 `S1148 1 . 1 0 `S1151 1 . 1 0 `S1155 1 . 1 0 `S1163 1 . 1 0 `S1166 1 . 1 0 `S1169 1 . 1 0 `S1172 1 . 1 0 `S1175 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES1178  1 e 1 @4034 ]
+[u S1099 . 1 `S1069 1 . 1 0 `S1072 1 . 1 0 `S1076 1 . 1 0 `S1084 1 . 1 0 `S1087 1 . 1 0 `S1090 1 . 1 0 `S1093 1 . 1 0 `S1096 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1099  1 e 1 @4034 ]
 "13709
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "13729
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"13749
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @4037 ]
+"14103
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @4038 ]
+"14341
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @4039 ]
+"14971
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @4040 ]
+"15225
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @4041 ]
 [s S59 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "15837
@@ -496,7 +490,24 @@ MENU_SAVE 7
 [v _OSCCON2 OSCCON2 `VEuc  1 e 1 @4050 ]
 "16012
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S1311 . 1 `uc 1 T0PS 1 0 :3:0 
+[s S475 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 HFIOFS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+`uc 1 IDLEN 1 0 :1:7 
+]
+"16035
+[s S481 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 IOFS 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S489 . 1 `S475 1 . 1 0 `S481 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES489  1 e 1 @4051 ]
+[s S1232 . 1 `uc 1 T0PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -504,12 +515,12 @@ MENU_SAVE 7
 `uc 1 TMR0ON 1 0 :1:7 
 ]
 "16115
-[s S1318 . 1 `uc 1 T0PS0 1 0 :1:0 
+[s S1239 . 1 `uc 1 T0PS0 1 0 :1:0 
 `uc 1 T0PS1 1 0 :1:1 
 `uc 1 T0PS2 1 0 :1:2 
 ]
-[u S1322 . 1 `S1311 1 . 1 0 `S1318 1 . 1 0 ]
-[v _T0CONbits T0CONbits `VES1322  1 e 1 @4053 ]
+[u S1243 . 1 `S1232 1 . 1 0 `S1239 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES1243  1 e 1 @4053 ]
 "16172
 [v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
 "16192
@@ -586,54 +597,57 @@ MENU_SAVE 7
 "185
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 [s S359 . 10 `uc 1 temp_low 1 0 `uc 1 temp_high 1 1 `uc 1 heat_start_hour 1 2 `uc 1 heat_start_min 1 3 `uc 1 heat_end_hour 1 4 `uc 1 heat_end_min 1 5 `uc 1 alarm_hour 1 6 `uc 1 alarm_min 1 7 `uc 1 alarm_enabled 1 8 `uc 1 alarm_tone 1 9 ]
-"14 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
+"14 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\main.c
 [v _settings settings `S359  1 e 10 0 ]
-[s S370 . 3 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hour 1 2 ]
+[s S370 . 3 `uc 1 second 1 0 `uc 1 minute 1 1 `uc 1 hour 1 2 ]
 "15
-[v _currentTime currentTime `S370  1 e 3 0 ]
-"17
-[v _current_temp_c current_temp_c `ui  1 e 2 0 ]
+[v _current_time current_time `S370  1 e 3 0 ]
+[s S374 . 3 `uc 1 day 1 0 `uc 1 month 1 1 `uc 1 year 1 2 ]
+"16
+[v _current_date current_date `S374  1 e 3 0 ]
 "18
-[v _heater_state heater_state `uc  1 e 1 0 ]
+[v _current_temp_c current_temp_c `ui  1 e 2 0 ]
 "19
+[v _heater_state heater_state `uc  1 e 1 0 ]
+"20
 [v _alarm_active alarm_active `uc  1 e 1 0 ]
-"34
-[v _current_state current_state `E6382  1 e 1 0 ]
+"35
+[v _current_state current_state `E6404  1 e 1 0 ]
 "36
-[v _last_drawn_state last_drawn_state `E6382  1 e 1 0 ]
-"38 C:\Users\767905\MPLABXProjects\Assignment.X\mcc_generated_files/system/src/interrupt.c
+[v _last_drawn_state last_drawn_state `E6404  1 e 1 0 ]
+"38 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\mcc_generated_files/system/src/interrupt.c
 [v _INT0_InterruptHandler INT0_InterruptHandler `*.37(v  1 e 2 0 ]
 "39
 [v _INT1_InterruptHandler INT1_InterruptHandler `*.37(v  1 e 2 0 ]
 "40
 [v _INT2_InterruptHandler INT2_InterruptHandler `*.37(v  1 e 2 0 ]
-"4 C:\Users\767905\MPLABXProjects\Assignment.X\sevenseg.c
+"4 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\sevenseg.c
 [v _SEG_MAP SEG_MAP `C[10]uc  1 e 10 0 ]
 "7
 [v _digits digits `VE[4]uc  1 e 4 0 ]
 "8
 [v _current_digit current_digit `VEuc  1 e 1 0 ]
-"206 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
+"199 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"248
+"250
 } 0
-"93
+"86
 [v _Update_Display Update_Display `(v  1 e 1 0 ]
 {
-"100
-[v Update_Display@buffer buffer `[17]uc  1 a 17 0 ]
-"142
+"93
+[v Update_Display@buffer buffer `[17]uc  1 a 17 2 ]
+"135
 } 0
 "9 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S1886 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[u S1828 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
 "13
-[s S1889 _IO_FILE 11 `S1886 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S1889  1 a 11 57 ]
+[s S1831 _IO_FILE 11 `S1828 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S1831  1 a 11 61 ]
 "12
-[v sprintf@ap ap `[1]*.30v  1 a 1 56 ]
+[v sprintf@ap ap `[1]*.30v  1 a 1 60 ]
 "9
 [v sprintf@s s `*.30uc  1 p 1 48 ]
 [v sprintf@fmt fmt `*.31Cuc  1 p 1 49 ]
@@ -644,9 +658,9 @@ MENU_SAVE 7
 {
 "1820
 [v vfprintf@cfmt cfmt `*.31uc  1 a 1 47 ]
-[s S1921 _IO_FILE 0 ]
+[s S1863 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.30S1921  1 p 1 44 ]
+[v vfprintf@fp fp `*.30S1863  1 p 1 44 ]
 [v vfprintf@fmt fmt `*.31Cuc  1 p 1 45 ]
 [v vfprintf@ap ap `*.30*.30v  1 p 1 46 ]
 "1840
@@ -654,16 +668,16 @@ MENU_SAVE 7
 "1177
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S1945 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+[u S1887 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
 "1188
-[v vfpfcnvrt@convarg convarg `S1945  1 a 4 38 ]
+[v vfpfcnvrt@convarg convarg `S1887  1 a 4 38 ]
 "1180
 [v vfpfcnvrt@done done `a  1 a 1 43 ]
 "1179
 [v vfpfcnvrt@cp cp `*.31uc  1 a 1 42 ]
-[s S1921 _IO_FILE 0 ]
+[s S1863 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.30S1921  1 p 1 33 ]
+[v vfpfcnvrt@fp fp `*.30S1863  1 p 1 33 ]
 [v vfpfcnvrt@fmt fmt `*.30*.31uc  1 p 1 34 ]
 [v vfpfcnvrt@ap ap `*.39*.30v  1 p 2 35 ]
 "1814
@@ -679,9 +693,9 @@ MENU_SAVE 7
 [v stoa@w w `i  1 a 2 17 ]
 "945
 [v stoa@p p `i  1 a 2 15 ]
-[s S1921 _IO_FILE 0 ]
+[s S1863 _IO_FILE 0 ]
 "942
-[v stoa@fp fp `*.30S1921  1 p 1 10 ]
+[v stoa@fp fp `*.30S1863  1 p 1 10 ]
 [v stoa@s s `*.35uc  1 p 2 11 ]
 "997
 } 0
@@ -707,9 +721,9 @@ MENU_SAVE 7
 [v dtoa@s s `uc  1 a 1 30 ]
 "520
 [v dtoa@p p `a  1 a 1 27 ]
-[s S1921 _IO_FILE 0 ]
+[s S1863 _IO_FILE 0 ]
 "513
-[v dtoa@fp fp `*.30S1921  1 p 1 22 ]
+[v dtoa@fp fp `*.30S1863  1 p 1 22 ]
 [v dtoa@d d `i  1 p 2 23 ]
 "583
 } 0
@@ -718,9 +732,9 @@ MENU_SAVE 7
 {
 "195
 [v pad@i i `i  1 a 2 20 ]
-[s S1921 _IO_FILE 0 ]
+[s S1863 _IO_FILE 0 ]
 "193
-[v pad@fp fp `*.30S1921  1 p 1 15 ]
+[v pad@fp fp `*.30S1863  1 p 1 15 ]
 [v pad@buf buf `*.30uc  1 p 1 16 ]
 [v pad@p p `i  1 p 2 17 ]
 "226
@@ -734,18 +748,18 @@ MENU_SAVE 7
 [v fputs@c c `uc  1 a 1 12 ]
 "8
 [v fputs@s s `*.30Cuc  1 p 1 10 ]
-[u S1886 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
-[s S1889 _IO_FILE 11 `S1886 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.30S1889  1 p 1 11 ]
+[u S1828 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[s S1831 _IO_FILE 11 `S1828 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.30S1831  1 p 1 11 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 2 ]
-[u S1886 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
-[s S1889 _IO_FILE 11 `S1886 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.30S1889  1 p 1 4 ]
+[u S1828 . 2 `*.30uc 1 buffer 1 0 `*.39Cuc 1 source 2 0 ]
+[s S1831 _IO_FILE 11 `S1828 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.30S1831  1 p 1 4 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\putch.c
@@ -758,55 +772,6 @@ MENU_SAVE 7
 {
 [v abs@a a `i  1 p 2 8 ]
 "4
-} 0
-"35 C:\Users\767905\MPLABXProjects\Assignment.X\sevenseg.c
-[v _SevenSeg_Update_Value SevenSeg_Update_Value `(v  1 e 1 0 ]
-{
-[v SevenSeg_Update_Value@number number `ui  1 p 2 14 ]
-"42
-} 0
-"7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwmod@counter counter `uc  1 a 1 13 ]
-"7
-[v ___lwmod@dividend dividend `ui  1 p 2 9 ]
-[v ___lwmod@divisor divisor `ui  1 p 2 11 ]
-"25
-} 0
-"7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\lwdiv.c
-[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
-{
-"10
-[v ___lwdiv@quotient quotient `ui  1 a 2 6 ]
-"11
-[v ___lwdiv@counter counter `uc  1 a 1 8 ]
-"7
-[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
-[v ___lwdiv@divisor divisor `ui  1 p 2 4 ]
-"30
-} 0
-"10 C:\Users\767905\MPLABXProjects\Assignment.X\sevenseg.c
-[v _SevenSeg_Init SevenSeg_Init `(v  1 e 1 0 ]
-{
-"33
-} 0
-"71 C:\Users\767905\MPLABXProjects\Assignment.X\rtc.c
-[v _RTC_Set_Time RTC_Set_Time `(v  1 e 1 0 ]
-{
-[v RTC_Set_Time@h h `uc  1 p 1 wreg ]
-[v RTC_Set_Time@h h `uc  1 p 1 wreg ]
-[v RTC_Set_Time@m m `uc  1 p 1 13 ]
-[v RTC_Set_Time@h h `uc  1 p 1 14 ]
-"79
-} 0
-"53
-[v _Dec2BCD Dec2BCD `(uc  1 e 1 0 ]
-{
-[v Dec2BCD@dec dec `uc  1 p 1 wreg ]
-[v Dec2BCD@dec dec `uc  1 p 1 wreg ]
-[v Dec2BCD@dec dec `uc  1 p 1 12 ]
 } 0
 "7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -832,64 +797,95 @@ MENU_SAVE 7
 [v ___awdiv@divisor divisor `i  1 p 2 4 ]
 "41
 } 0
-"55 C:\Users\767905\MPLABXProjects\Assignment.X\rtc.c
+"35 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\sevenseg.c
+[v _SevenSeg_Update_Value SevenSeg_Update_Value `(v  1 e 1 0 ]
+{
+[v SevenSeg_Update_Value@number number `ui  1 p 2 14 ]
+"42
+} 0
+"7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"7
+[v ___lwmod@dividend dividend `ui  1 p 2 9 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 11 ]
+"25
+} 0
+"10 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\sevenseg.c
+[v _SevenSeg_Init SevenSeg_Init `(v  1 e 1 0 ]
+{
+"33
+} 0
+"54 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\rtc.c
 [v _RTC_Init RTC_Init `(v  1 e 1 0 ]
 {
-} 0
-"12
-[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
-{
-"16
-} 0
 "57
-[v _RTC_Get_Time RTC_Get_Time `(v  1 e 1 0 ]
-{
-[s S370 . 3 `uc 1 sec 1 0 `uc 1 min 1 1 `uc 1 hour 1 2 ]
-[v RTC_Get_Time@t t `*.30S370  1 p 1 8 ]
-"69
 } 0
-"29
-[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+"47
+[v _rtc16_default_cfg rtc16_default_cfg `(v  1 e 1 0 ]
 {
-[v I2C_Write@data data `uc  1 p 1 wreg ]
-"30
-[v I2C_Write@i i `i  1 a 2 3 ]
-"29
-[v I2C_Write@data data `uc  1 p 1 wreg ]
-[v I2C_Write@data data `uc  1 p 1 2 ]
-"37
-} 0
-"23
-[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-{
-"27
-} 0
-"18
-[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
-{
-"21
-} 0
-"39
-[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
-{
-[v I2C_Read@ack ack `uc  1 p 1 wreg ]
-"42
-[v I2C_Read@i i `i  1 a 2 6 ]
-"40
-[v I2C_Read@data data `uc  1 a 1 5 ]
-"39
-[v I2C_Read@ack ack `uc  1 p 1 wreg ]
-[v I2C_Read@ack ack `uc  1 p 1 4 ]
 "50
 } 0
-"52
-[v _BCD2Dec BCD2Dec `(uc  1 e 1 0 ]
+"28
+[v _rtc16_write_reg rtc16_write_reg `(v  1 e 1 0 ]
 {
-[v BCD2Dec@bcd bcd `uc  1 p 1 wreg ]
-[v BCD2Dec@bcd bcd `uc  1 p 1 wreg ]
-[v BCD2Dec@bcd bcd `uc  1 p 1 3 ]
+[v rtc16_write_reg@reg reg `uc  1 p 1 wreg ]
+[v rtc16_write_reg@reg reg `uc  1 p 1 wreg ]
+[v rtc16_write_reg@val val `uc  1 p 1 4 ]
+[v rtc16_write_reg@reg reg `uc  1 p 1 5 ]
+"34
 } 0
-"19 C:\Users\767905\MPLABXProjects\Assignment.X\lm35.c
+"67
+[v _RTC_Get_Time RTC_Get_Time `(v  1 e 1 0 ]
+{
+"68
+[v RTC_Get_Time@b b `[3]uc  1 a 3 16 ]
+[s S370 . 3 `uc 1 second 1 0 `uc 1 minute 1 1 `uc 1 hour 1 2 ]
+"67
+[v RTC_Get_Time@t t `*.30S370  1 p 1 15 ]
+"73
+} 0
+"75
+[v _RTC_Get_Date RTC_Get_Date `(v  1 e 1 0 ]
+{
+"76
+[v RTC_Get_Date@b b `[3]uc  1 a 3 16 ]
+[s S374 . 3 `uc 1 day 1 0 `uc 1 month 1 1 `uc 1 year 1 2 ]
+"75
+[v RTC_Get_Date@t t `*.30S374  1 p 1 15 ]
+"81
+} 0
+"36
+[v _rtc16_read_regs rtc16_read_regs `(v  1 e 1 0 ]
+{
+[v rtc16_read_regs@reg reg `uc  1 p 1 wreg ]
+"37
+[v rtc16_read_regs@i i `uc  1 a 1 14 ]
+"36
+[v rtc16_read_regs@reg reg `uc  1 p 1 wreg ]
+[v rtc16_read_regs@buf buf `*.30uc  1 p 1 4 ]
+[v rtc16_read_regs@len len `uc  1 p 1 5 ]
+"38
+[v rtc16_read_regs@reg reg `uc  1 p 1 11 ]
+"45
+} 0
+"71 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\i2c.c
+[v _I2C1_Read_ACK I2C1_Read_ACK `(uc  1 e 1 0 ]
+{
+"73
+[v I2C1_Read_ACK@v v `uc  1 a 1 3 ]
+"81
+} 0
+"26 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\rtc.c
+[v _bcd_to_dec bcd_to_dec `(uc  1 s 1 bcd_to_dec ]
+{
+[v bcd_to_dec@b b `uc  1 p 1 wreg ]
+[v bcd_to_dec@b b `uc  1 p 1 wreg ]
+[v bcd_to_dec@b b `uc  1 p 1 3 ]
+} 0
+"19 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\lm35.c
 [v _LM35_Read_Temp LM35_Read_Temp `(ui  1 e 2 0 ]
 {
 "26
@@ -908,24 +904,45 @@ MENU_SAVE 7
 [v ___lmul@multiplicand multiplicand `ul  1 p 4 6 ]
 "129
 } 0
-"5 C:\Users\767905\MPLABXProjects\Assignment.X\lm35.c
+"5 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\lm35.c
 [v _LM35_Init LM35_Init `(v  1 e 1 0 ]
 {
 "17
 } 0
-"29 C:\Users\767905\MPLABXProjects\Assignment.X\lcd.c
+"29 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\lcd.c
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
 {
 "43
 } 0
-"144 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
+"26 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\i2c.c
+[v _I2C1_Init_Master I2C1_Init_Master `(v  1 e 1 0 ]
+{
+"27
+[v I2C1_Init_Master@brg brg `ul  1 a 4 23 ]
+"26
+[v I2C1_Init_Master@i2c_hz i2c_hz `ul  1 p 4 15 ]
+"36
+} 0
+"7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 10 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 14 ]
+"7
+[v ___lldiv@dividend dividend `ul  1 p 4 2 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 6 ]
+"30
+} 0
+"137 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\main.c
 [v _Handle_Input Handle_Input `(v  1 e 1 0 ]
 {
-"145
-[v Handle_Input@btn btn `uc  1 a 1 12 ]
-"204
+"138
+[v Handle_Input@btn btn `uc  1 a 1 16 ]
+"197
 } 0
-"45 C:\Users\767905\MPLABXProjects\Assignment.X\lcd.c
+"45 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\lcd.c
 [v _LCD_String LCD_String `(v  1 e 1 0 ]
 {
 [v LCD_String@str str `*.35Cuc  1 p 2 5 ]
@@ -973,7 +990,7 @@ MENU_SAVE 7
 [v LCD_Nibble@nibble nibble `uc  1 p 1 3 ]
 "13
 } 0
-"40 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
+"40 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\buttons.c
 [v _Button_Read Button_Read `(uc  1 e 1 0 ]
 {
 "61
@@ -985,10 +1002,10 @@ MENU_SAVE 7
 [v Get_Button@last last `*.30uc  1 p 1 4 ]
 "38
 } 0
-"72 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
+"67 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\main.c
 [v _Handle_Alarm Handle_Alarm `(v  1 e 1 0 ]
 {
-"91
+"84
 } 0
 "7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\llmod.c
 [v ___llmod __llmod `(ul  1 e 4 0 ]
@@ -1000,76 +1017,140 @@ MENU_SAVE 7
 [v ___llmod@divisor divisor `ul  1 p 4 6 ]
 "25
 } 0
-"63 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
-[v _Buzzer_Play Buzzer_Play `(v  1 e 1 0 ]
-{
-[v Buzzer_Play@tone_type tone_type `uc  1 p 1 wreg ]
-"64
-[v Buzzer_Play@i i `ui  1 a 2 3 ]
-"63
-[v Buzzer_Play@tone_type tone_type `uc  1 p 1 wreg ]
-"65
-[v Buzzer_Play@tone_type tone_type `uc  1 p 1 2 ]
-"80
-} 0
-"25 C:\Users\767905\MPLABXProjects\Assignment.X\eeprom.c
+"53 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\eeprom.c
 [v _EEPROM_Load_Settings EEPROM_Load_Settings `(v  1 e 1 0 ]
 {
-"26
-[v EEPROM_Load_Settings@check check `uc  1 a 1 6 ]
+"54
+[v EEPROM_Load_Settings@check check `uc  1 a 1 15 ]
 [s S359 . 10 `uc 1 temp_low 1 0 `uc 1 temp_high 1 1 `uc 1 heat_start_hour 1 2 `uc 1 heat_start_min 1 3 `uc 1 heat_end_hour 1 4 `uc 1 heat_end_min 1 5 `uc 1 alarm_hour 1 6 `uc 1 alarm_min 1 7 `uc 1 alarm_enabled 1 8 `uc 1 alarm_tone 1 9 ]
-"25
-[v EEPROM_Load_Settings@s s `*.30S359  1 p 1 5 ]
-"52
+"53
+[v EEPROM_Load_Settings@s s `*.30S359  1 p 1 14 ]
+"80
 } 0
-"17
+"37
 [v _Read_Byte Read_Byte `(uc  1 e 1 0 ]
 {
-[v Read_Byte@addr addr `uc  1 p 1 wreg ]
-[v Read_Byte@addr addr `uc  1 p 1 wreg ]
-[v Read_Byte@addr addr `uc  1 p 1 2 ]
-"23
+"41
+[v Read_Byte@v v `uc  1 a 1 10 ]
+"40
+[v Read_Byte@a7_0 a7_0 `uc  1 a 1 9 ]
+"39
+[v Read_Byte@devR devR `uc  1 a 1 8 ]
+"38
+[v Read_Byte@devW devW `uc  1 a 1 7 ]
+"37
+[v Read_Byte@addr10 addr10 `ui  1 p 2 5 ]
+"51
 } 0
-"54
+"12
+[v _m24c08_devsel_read m24c08_devsel_read `(uc  1 s 1 m24c08_devsel_read ]
+{
+"13
+[v m24c08_devsel_read@a9a8 a9a8 `uc  1 a 1 4 ]
+"12
+[v m24c08_devsel_read@addr10 addr10 `ui  1 p 2 2 ]
+"15
+} 0
+"46 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\i2c.c
+[v _I2C1_Restart I2C1_Restart `(v  1 e 1 0 ]
+{
+"52
+} 0
+"83
+[v _I2C1_Read_NACK I2C1_Read_NACK `(uc  1 e 1 0 ]
+{
+"85
+[v I2C1_Read_NACK@v v `uc  1 a 1 3 ]
+"94
+} 0
+"82 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\eeprom.c
 [v _EEPROM_Save_Settings EEPROM_Save_Settings `(v  1 e 1 0 ]
 {
 [s S359 . 10 `uc 1 temp_low 1 0 `uc 1 temp_high 1 1 `uc 1 heat_start_hour 1 2 `uc 1 heat_start_min 1 3 `uc 1 heat_end_hour 1 4 `uc 1 heat_end_min 1 5 `uc 1 alarm_hour 1 6 `uc 1 alarm_min 1 7 `uc 1 alarm_enabled 1 8 `uc 1 alarm_tone 1 9 ]
-[v EEPROM_Save_Settings@s s `*.30S359  1 p 1 4 ]
-"66
+[v EEPROM_Save_Settings@s s `*.30S359  1 p 1 13 ]
+"94
 } 0
-"4
+"17
 [v _Write_Byte Write_Byte `(v  1 e 1 0 ]
 {
-[v Write_Byte@addr addr `uc  1 p 1 wreg ]
-[v Write_Byte@addr addr `uc  1 p 1 wreg ]
-[v Write_Byte@data data `uc  1 p 1 2 ]
-[v Write_Byte@addr addr `uc  1 p 1 3 ]
-"15
+"20
+[v Write_Byte@tries tries `ui  1 a 2 9 ]
+"18
+[v Write_Byte@devW devW `uc  1 a 1 12 ]
+"19
+[v Write_Byte@a7_0 a7_0 `uc  1 a 1 11 ]
+"17
+[v Write_Byte@addr10 addr10 `ui  1 p 2 5 ]
+[v Write_Byte@data data `uc  1 p 1 7 ]
+"35
 } 0
-"11 C:\Users\767905\MPLABXProjects\Assignment.X\buttons.c
+"8
+[v _m24c08_devsel_write m24c08_devsel_write `(uc  1 s 1 m24c08_devsel_write ]
+{
+"9
+[v m24c08_devsel_write@a9a8 a9a8 `uc  1 a 1 4 ]
+"8
+[v m24c08_devsel_write@addr10 addr10 `ui  1 p 2 2 ]
+"11
+} 0
+"61 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\i2c.c
+[v _I2C1_Write I2C1_Write `(uc  1 e 1 0 ]
+{
+[v I2C1_Write@b b `uc  1 p 1 wreg ]
+[v I2C1_Write@b b `uc  1 p 1 wreg ]
+"63
+[v I2C1_Write@b b `uc  1 p 1 3 ]
+"69
+} 0
+"54
+[v _I2C1_Stop I2C1_Stop `(v  1 e 1 0 ]
+{
+"59
+} 0
+"39
+[v _I2C1_Start I2C1_Start `(v  1 e 1 0 ]
+{
+"44
+} 0
+"22
+[v _I2C1_WaitIdle I2C1_WaitIdle `(v  1 s 1 I2C1_WaitIdle ]
+{
+"24
+} 0
+"11 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\buttons.c
 [v _Controls_Init Controls_Init `(v  1 e 1 0 ]
 {
 "19
 } 0
-"48 C:\Users\767905\MPLABXProjects\Assignment.X\main.c
+"45 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\main.c
 [v _Check_Heating_Logic Check_Heating_Logic `(v  1 e 1 0 ]
 {
-"50
-[v Check_Heating_Logic@now_mins now_mins `ui  1 a 2 9 ]
-"52
-[v Check_Heating_Logic@end_mins end_mins `ui  1 a 2 7 ]
-"51
-[v Check_Heating_Logic@start_mins start_mins `ui  1 a 2 5 ]
-"54
-[v Check_Heating_Logic@in_window in_window `uc  1 a 1 4 ]
-"70
+"46
+[v Check_Heating_Logic@now_mins now_mins `ui  1 a 2 15 ]
+"48
+[v Check_Heating_Logic@end_mins end_mins `ui  1 a 2 13 ]
+"47
+[v Check_Heating_Logic@start_mins start_mins `ui  1 a 2 11 ]
+"65
 } 0
-"40
+"7 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 6 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 8 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 4 ]
+"30
+} 0
+"38 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\main.c
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"46
+"43
 } 0
-"44 C:\Users\767905\MPLABXProjects\Assignment.X\sevenseg.c
+"44 C:\Users\767905\OneDrive - hull.ac.uk\Desktop\EmbeddedSystems\Assignment.X\sevenseg.c
 [v _SevenSeg_ISR_Handler SevenSeg_ISR_Handler `(v  1 e 1 0 ]
 {
 "65
